@@ -7,7 +7,7 @@
     --color-accent: #FAC67A;         /* Dorado suave - Destacados */
     --color-highlight: #DA498D;      /* Rosa magenta - Interacciones */
 
-    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-main: 'Comfortaa', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Estilos generales */
@@ -158,12 +158,30 @@ nav ul li a:hover::after {
 /* Sección Hero */
 #hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, #8B4A9E 0%, #B157C2 25%, #DA498D 50%, #E85CA6 75%, #C946A0 100%);
+    background: #f9f7f3;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
     padding: 120px 0 80px;
+}
+
+/* Wave divisoria al final del hero */
+.hero-wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.hero-wave-divider svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    animation: waveDivider 8s ease-in-out infinite;
 }
 
 /* Formas decorativas fluidas */
@@ -180,46 +198,66 @@ nav ul li a:hover::after {
 .shape {
     position: absolute;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    opacity: 0.4;
+    opacity: 0.5;
     animation: float 20s infinite ease-in-out;
 }
 
 .shape-1 {
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(135deg, #C946A0, #DA498D);
-    top: -10%;
-    left: 5%;
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(135deg, rgba(218, 73, 141, 0.4), rgba(105, 36, 124, 0.3));
+    top: 5%;
+    right: 8%;
     animation-delay: 0s;
 }
 
 .shape-2 {
-    width: 350px;
-    height: 350px;
-    background: linear-gradient(135deg, #E85CA6, #FF6BC7);
-    top: 40%;
-    right: -5%;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, rgba(218, 73, 141, 0.35), rgba(250, 198, 122, 0.3));
+    bottom: 12%;
+    right: 20%;
     border-radius: 50% 50% 50% 50%;
     animation-delay: 2s;
 }
 
 .shape-3 {
-    width: 250px;
-    height: 250px;
-    background: linear-gradient(135deg, #69247C, #8B4A9E);
-    bottom: 10%;
-    left: 10%;
+    width: 220px;
+    height: 220px;
+    background: linear-gradient(135deg, rgba(105, 36, 124, 0.3), rgba(218, 73, 141, 0.25));
+    top: 45%;
+    right: 35%;
     animation-delay: 4s;
 }
 
 .shape-4 {
-    width: 200px;
-    height: 500px;
-    background: rgba(255, 255, 255, 0.08);
-    top: -10%;
-    right: 15%;
+    width: 150px;
+    height: 350px;
+    background: linear-gradient(135deg, rgba(250, 198, 122, 0.3), rgba(218, 73, 141, 0.2));
+    top: 8%;
+    right: 28%;
     border-radius: 40% 60% 60% 40% / 70% 70% 30% 30%;
     animation-delay: 1s;
+}
+
+.shape-5 {
+    width: 260px;
+    height: 260px;
+    background: linear-gradient(135deg, rgba(105, 36, 124, 0.35), rgba(250, 198, 122, 0.25));
+    top: 25%;
+    left: 8%;
+    border-radius: 50% 50% 50% 50%;
+    animation-delay: 3s;
+}
+
+.shape-6 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(218, 73, 141, 0.3), rgba(105, 36, 124, 0.25));
+    bottom: 20%;
+    left: 18%;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation-delay: 5s;
 }
 
 /* Puntos decorativos */
@@ -227,27 +265,33 @@ nav ul li a:hover::after {
     position: absolute;
     width: 120px;
     height: 120px;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.4) 2px, transparent 2px);
+    background-image: radial-gradient(circle, rgba(218, 73, 141, 0.3) 2px, transparent 2px);
     background-size: 15px 15px;
     animation: float 15s infinite ease-in-out;
 }
 
 .dots-1 {
-    top: 20%;
-    right: 25%;
+    top: 18%;
+    right: 45%;
     animation-delay: 1s;
 }
 
 .dots-2 {
-    bottom: 30%;
+    bottom: 25%;
     right: 10%;
     animation-delay: 3s;
 }
 
 .dots-3 {
-    top: 50%;
-    left: 15%;
+    top: 65%;
+    right: 55%;
     animation-delay: 2s;
+}
+
+.dots-4 {
+    top: 55%;
+    left: 12%;
+    animation-delay: 4s;
 }
 
 /* Triángulos decorativos */
@@ -256,32 +300,48 @@ nav ul li a:hover::after {
     width: 0;
     height: 0;
     border-style: solid;
-    opacity: 0.15;
+    opacity: 0.2;
     animation: float 18s infinite ease-in-out;
 }
 
 .triangle-1 {
     border-width: 0 30px 52px 30px;
-    border-color: transparent transparent rgba(255, 255, 255, 0.5) transparent;
-    top: 30%;
-    left: 20%;
+    border-color: transparent transparent rgba(105, 36, 124, 0.5) transparent;
+    top: 38%;
+    right: 15%;
     animation-delay: 0.5s;
 }
 
 .triangle-2 {
     border-width: 0 25px 43px 25px;
-    border-color: transparent transparent rgba(255, 255, 255, 0.3) transparent;
-    bottom: 25%;
-    right: 30%;
+    border-color: transparent transparent rgba(218, 73, 141, 0.45) transparent;
+    bottom: 40%;
+    right: 48%;
     animation-delay: 2.5s;
 }
 
 .triangle-3 {
     border-width: 0 20px 35px 20px;
-    border-color: transparent transparent rgba(255, 255, 255, 0.4) transparent;
-    top: 60%;
-    left: 40%;
+    border-color: transparent transparent rgba(250, 198, 122, 0.5) transparent;
+    top: 28%;
+    right: 60%;
     animation-delay: 1.5s;
+}
+
+.triangle-4 {
+    border-width: 0 28px 48px 28px;
+    border-color: transparent transparent rgba(105, 36, 124, 0.45) transparent;
+    top: 18%;
+    left: 22%;
+    animation-delay: 3.5s;
+}
+
+.triangle-5 {
+    border-width: 0 22px 38px 22px;
+    border-color: transparent transparent rgba(218, 73, 141, 0.5) transparent;
+    bottom: 35%;
+    left: 10%;
+    animation-delay: 4.5s;
 }
 
 /* Contenedor del hero */
@@ -297,36 +357,36 @@ nav ul li a:hover::after {
 /* Contenido del hero */
 .hero-content {
     text-align: left;
-    color: white;
-    animation: fadeInLeft 1s ease;
+    animation: fadeInRight 1s ease;
 }
 
 .hero-subtitle {
     display: inline-block;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 3px;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--color-secondary);
     margin-bottom: 15px;
     animation: fadeInDown 0.8s ease;
 }
 
 .hero-title {
     font-size: 4rem;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 1.1;
     margin-bottom: 25px;
-    color: #1a1a1a;
+    color: var(--color-primary);
     animation: fadeInDown 1s ease 0.2s;
     animation-fill-mode: both;
 }
 
 .hero-description {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     line-height: 1.8;
     margin-bottom: 35px;
-    color: rgba(50, 50, 50, 0.8);
+    color: #555;
     max-width: 500px;
+    font-weight: 400;
     animation: fadeInDown 1s ease 0.4s;
     animation-fill-mode: both;
 }
@@ -342,37 +402,39 @@ nav ul li a:hover::after {
 
 .btn-primary {
     background-color: transparent;
-    color: #6B3FD6;
-    border: 2px solid #6B3FD6;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
     padding: 14px 32px;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #6B3FD6;
+    background-color: var(--color-primary);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(107, 63, 214, 0.3);
+    box-shadow: 0 8px 20px rgba(105, 36, 124, 0.3);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: #6B3FD6;
+    color: var(--color-secondary);
     padding: 14px 32px;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
     border: none;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .btn-secondary:hover {
-    color: #4A2A99;
+    color: var(--color-primary);
     transform: translateX(5px);
 }
 
@@ -380,17 +442,26 @@ nav ul li a:hover::after {
 .hero-visual {
     position: relative;
     height: 500px;
-    animation: fadeInRight 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInLeft 1s ease;
 }
 
 .hero-decoration {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
-    border-radius: 200px 0 0 200px;
-    backdrop-filter: blur(10px);
-    box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-icon {
+    width: 70%;
+    height: auto;
+    animation: float 6s infinite ease-in-out;
+    filter: drop-shadow(0 10px 30px rgba(218, 73, 141, 0.2));
 }
 
 /* Animaciones */
@@ -428,6 +499,15 @@ nav ul li a:hover::after {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes waveDivider {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px);
     }
 }
 
@@ -698,13 +778,45 @@ footer {
     }
 
     .shape-1, .shape-2 {
-        width: 250px;
-        height: 250px;
+        width: 180px;
+        height: 180px;
     }
 
     .shape-3, .shape-4 {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 250px;
+    }
+
+    .shape-5, .shape-6 {
+        width: 160px;
+        height: 160px;
+    }
+
+    .dots {
+        width: 80px;
+        height: 80px;
+        background-size: 10px 10px;
+    }
+
+    .triangle {
+        opacity: 0.15;
+    }
+
+    .triangle-1, .triangle-4 {
+        border-width: 0 20px 35px 20px;
+    }
+
+    .triangle-2, .triangle-5 {
+        border-width: 0 15px 26px 15px;
+    }
+
+    .triangle-3 {
+        border-width: 0 12px 21px 12px;
+    }
+
+    /* Desactivar animación de wave en móvil */
+    .hero-wave-divider svg {
+        animation: none;
     }
 
     .section-title {

@@ -1,0 +1,265 @@
+/* ========================================
+   COMPONENTES REUTILIZABLES
+   ======================================== */
+
+/* Botones base */
+.btn {
+    display: inline-block;
+    background-color: var(--color-highlight);
+    color: var(--color-white);
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition-fast);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Botón primario */
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-white);
+    border: none;
+    padding: 18px 42px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(105, 36, 124, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Efecto de brillo animado */
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transition: left 0.6s ease;
+    z-index: -1;
+}
+
+/* Glow effect */
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg,
+        rgba(218, 73, 141, 0.7),
+        rgba(105, 36, 124, 0.7)
+    );
+    border-radius: 50px;
+    opacity: 0;
+    z-index: -1;
+    filter: blur(12px);
+    transition: opacity 0.4s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover::after {
+    opacity: 1;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(218, 73, 141, 0.6);
+    background: linear-gradient(135deg,
+        rgba(218, 73, 141, 1) 0%,
+        rgba(105, 36, 124, 1) 100%
+    );
+}
+
+.btn-primary:active {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(105, 36, 124, 0.4);
+}
+
+/* Botón secundario */
+.btn-secondary {
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+    padding: 18px 42px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid var(--color-secondary);
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(218, 73, 141, 0.15);
+}
+
+.btn-secondary::after {
+    content: '→';
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%) translateX(0);
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border-color: var(--color-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(218, 73, 141, 0.3);
+    padding-right: 60px;
+}
+
+.btn-secondary:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(5px);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 12px rgba(218, 73, 141, 0.2);
+}
+
+/* Tarjetas de servicio */
+.service-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: var(--transition-fast);
+    box-shadow: var(--shadow-md);
+    border: 2px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-accent);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+/* Estadísticas */
+.stat {
+    text-align: center;
+    padding: var(--spacing-sm);
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    width: 150px;
+    border: 2px solid transparent;
+    transition: var(--transition-fast);
+}
+
+.stat:hover {
+    border-color: var(--color-secondary);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(218, 73, 141, 0.15);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-highlight);
+}
+
+.stat-text {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: var(--spacing-sm);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(218, 73, 141, 0.1);
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Redes sociales */
+.social-media {
+    margin-top: var(--spacing-md);
+}
+
+.social-media a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-right: var(--spacing-xs);
+    transition: var(--transition-fast);
+}
+
+.social-media a:hover {
+    background-color: var(--color-highlight);
+    transform: translateY(-3px);
+}

@@ -1,0 +1,125 @@
+/* ========================================
+   ANIMACIONES
+   ======================================== */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes waveDivider {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+}
+
+/* Animación de pulso para elementos interactivos */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Animación de rebote suave */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animación de brillo para botones */
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* Animación de pulso suave para botones */
+@keyframes buttonPulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(105, 36, 124, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(105, 36, 124, 0.5);
+    }
+}
+
+/* Animación de glow */
+@keyframes glow {
+    0%, 100% {
+        filter: drop-shadow(0 0 5px rgba(218, 73, 141, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 15px rgba(218, 73, 141, 0.8));
+    }
+}
+
+/* Animación de gradiente para botones */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}

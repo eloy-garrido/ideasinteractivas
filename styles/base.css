@@ -1,0 +1,49 @@
+/* ========================================
+   ESTILOS BASE Y RESET
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-highlight);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: var(--font-main);
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+input,
+textarea,
+select {
+    font-family: var(--font-main);
+}

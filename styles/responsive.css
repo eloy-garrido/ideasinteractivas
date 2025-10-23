@@ -1,0 +1,424 @@
+/* ========================================
+   ESTILOS RESPONSIVE
+   Mobile-first approach
+   ======================================== */
+
+/* ========================================
+   TABLET - 768px y menores
+   ======================================== */
+@media (max-width: 768px) {
+    /* Navegación móvil */
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: var(--color-primary);
+        width: 100%;
+        padding: var(--spacing-sm);
+        transform: translateY(-150%);
+        transition: transform var(--transition-fast);
+        box-shadow: var(--shadow-md);
+    }
+
+    nav.active {
+        transform: translateY(0);
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: var(--spacing-xs) 0;
+        text-align: center;
+    }
+
+    /* Hero */
+    .hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+    
+    /* Mostrar logo alternativo en la parte superior */
+    .mobile-logo {
+        display: block;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    /* Formas decorativas - reducir tamaño en móvil */
+    .shape-1, .shape-2 {
+        width: 180px;
+        height: 180px;
+    }
+
+    .shape-3, .shape-4 {
+        width: 120px;
+        height: 250px;
+    }
+
+    .shape-5, .shape-6 {
+        width: 160px;
+        height: 160px;
+    }
+
+    .dots {
+        width: 80px;
+        height: 80px;
+        background-size: 10px 10px;
+    }
+
+    .triangle {
+        opacity: 0.15;
+    }
+
+    .triangle-1, .triangle-4 {
+        border-width: 0 20px 35px 20px;
+    }
+
+    .triangle-2, .triangle-5 {
+        border-width: 0 15px 26px 15px;
+    }
+
+    .triangle-3 {
+        border-width: 0 12px 21px 12px;
+    }
+
+    /* Desactivar animación de wave en móvil para mejor performance */
+    .hero-wave-divider svg {
+        animation: none;
+    }
+
+    /* Títulos de sección */
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Secciones */
+    .about-content,
+    .contact-container {
+        flex-direction: column;
+    }
+
+    /* Grid de servicios */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    /* Estadísticas */
+    .about-stats {
+        justify-content: center;
+    }
+
+    .stat {
+        width: 140px;
+    }
+
+    /* Container */
+    .container {
+        width: 95%;
+        padding: 0 15px;
+    }
+}
+
+/* ========================================
+   MÓVIL PEQUEÑO - 480px y menores
+   ======================================== */
+@media (max-width: 480px) {
+    /* Hero */
+    #hero {
+        padding: 100px 0 60px;
+        min-height: auto;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+
+    .hero-buttons .btn {
+        padding: 12px 24px;
+        font-size: 0.85rem;
+    }
+
+    /* Reducir aún más las formas decorativas */
+    .shape-1, .shape-2 {
+        width: 120px;
+        height: 120px;
+    }
+
+    .shape-3, .shape-4 {
+        width: 80px;
+        height: 180px;
+    }
+
+    .shape-5, .shape-6 {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Ocultar algunos elementos decorativos en móviles pequeños */
+    .dots-3, .dots-4,
+    .triangle-3, .triangle-4, .triangle-5 {
+        display: none;
+    }
+
+    /* Títulos */
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 30px;
+    }
+
+    /* Secciones */
+    #servicios,
+    #nosotros,
+    #contacto {
+        padding: 60px 0;
+    }
+
+    /* Service cards */
+    .service-card {
+        padding: var(--spacing-sm);
+    }
+
+    .service-card i {
+        font-size: 2.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Estadísticas */
+    .stat {
+        width: 120px;
+        padding: 15px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-text {
+        font-size: 0.8rem;
+    }
+
+    /* Logo */
+    .logo img {
+        height: 40px;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Formulario */
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    /* Íconos de redes sociales */
+    .social-media a {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        margin-right: 8px;
+    }
+}
+
+/* ========================================
+   TABLET HORIZONTAL - 992px y mayores
+   ======================================== */
+@media (min-width: 992px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+/* ========================================
+   DESKTOP GRANDE - 1200px y mayores
+   ======================================== */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1600px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Limitar tamaño del hero visual en pantallas grandes */
+    .hero-decoration {
+        max-width: 550px;
+    }
+
+    .hero-icon {
+        max-width: 450px;
+    }
+}
+
+/* ========================================
+   PANTALLAS EXTRA GRANDES - 1600px y mayores
+   ======================================== */
+@media (min-width: 1600px) {
+    /* Mantener proporciones óptimas en pantallas muy grandes */
+    .hero-wrapper {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .hero-decoration {
+        max-width: 500px;
+    }
+
+    .hero-icon {
+        max-width: 420px;
+    }
+}
+
+/* ========================================
+   OPTIMIZACIONES DE PERFORMANCE
+   ======================================== */
+
+/* Reducir animaciones en dispositivos que prefieren movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Optimizar para pantallas táctiles */
+@media (hover: none) and (pointer: coarse) {
+    /* Aumentar áreas táctiles */
+    .btn,
+    nav ul li a,
+    .social-media a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Remover efectos hover en dispositivos táctiles */
+    .service-card:hover,
+    .stat:hover {
+        transform: none;
+    }
+}
+
+/* ========================================
+   MODO PAISAJE EN MÓVILES
+   ======================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    #hero {
+        min-height: auto;
+        padding: 100px 0 40px;
+    }
+
+    .hero-wrapper {
+        gap: 30px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    /* Reducir tamaño de formas decorativas */
+    .shape {
+        transform: scale(0.6);
+    }
+}
+
+/* ========================================
+   IMPRESIÓN
+   ======================================== */
+@media print {
+    /* Ocultar elementos no necesarios para impresión */
+    header,
+    .menu-toggle,
+    .hero-shapes,
+    .hero-wave-divider,
+    .social-media,
+    footer {
+        display: none;
+    }
+
+    /* Optimizar para impresión */
+    body {
+        background: white;
+        color: black;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+    }
+
+    /* Evitar saltos de página en elementos importantes */
+    .service-card,
+    .stat,
+    .info-item {
+        page-break-inside: avoid;
+    }
+}

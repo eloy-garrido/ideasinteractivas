@@ -1,0 +1,301 @@
+/* ========================================
+   SECCIÓN HERO
+   ======================================== */
+
+#hero {
+    height: 100vh;
+    background: #f9f7f3;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Logo móvil en la parte superior */
+.mobile-logo {
+    display: none;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+    margin-bottom: 2rem;
+}
+
+.mobile-logo img {
+    height: 80px;
+    width: auto;
+    margin: 0 auto;
+}
+
+/* Wave divisoria al final del hero */
+.hero-wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.hero-wave-divider svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    animation: waveDivider 8s ease-in-out infinite;
+}
+
+/* Formas decorativas fluidas */
+.hero-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    opacity: 0.5;
+    animation: float 20s infinite ease-in-out;
+}
+
+.shape-1 {
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(135deg, rgba(218, 73, 141, 0.4), rgba(105, 36, 124, 0.3));
+    top: 5%;
+    right: 8%;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, rgba(218, 73, 141, 0.35), rgba(250, 198, 122, 0.3));
+    bottom: 12%;
+    right: 20%;
+    border-radius: 50% 50% 50% 50%;
+    animation-delay: 2s;
+}
+
+.shape-3 {
+    width: 220px;
+    height: 220px;
+    background: linear-gradient(135deg, rgba(105, 36, 124, 0.3), rgba(218, 73, 141, 0.25));
+    top: 45%;
+    right: 35%;
+    animation-delay: 4s;
+}
+
+.shape-4 {
+    width: 150px;
+    height: 350px;
+    background: linear-gradient(135deg, rgba(250, 198, 122, 0.3), rgba(218, 73, 141, 0.2));
+    top: 8%;
+    right: 28%;
+    border-radius: 40% 60% 60% 40% / 70% 70% 30% 30%;
+    animation-delay: 1s;
+}
+
+.shape-5 {
+    width: 260px;
+    height: 260px;
+    background: linear-gradient(135deg, rgba(105, 36, 124, 0.35), rgba(250, 198, 122, 0.25));
+    top: 25%;
+    left: 8%;
+    border-radius: 50% 50% 50% 50%;
+    animation-delay: 3s;
+}
+
+.shape-6 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(218, 73, 141, 0.3), rgba(105, 36, 124, 0.25));
+    bottom: 20%;
+    left: 18%;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation-delay: 5s;
+}
+
+/* Puntos decorativos */
+.dots {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-image: radial-gradient(circle, rgba(218, 73, 141, 0.3) 2px, transparent 2px);
+    background-size: 15px 15px;
+    animation: float 15s infinite ease-in-out;
+}
+
+.dots-1 {
+    top: 18%;
+    right: 45%;
+    animation-delay: 1s;
+}
+
+.dots-2 {
+    bottom: 25%;
+    right: 10%;
+    animation-delay: 3s;
+}
+
+.dots-3 {
+    top: 65%;
+    right: 55%;
+    animation-delay: 2s;
+}
+
+.dots-4 {
+    top: 55%;
+    left: 12%;
+    animation-delay: 4s;
+}
+
+/* Triángulos decorativos */
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    opacity: 0.2;
+    animation: float 18s infinite ease-in-out;
+}
+
+.triangle-1 {
+    border-width: 0 30px 52px 30px;
+    border-color: transparent transparent rgba(105, 36, 124, 0.5) transparent;
+    top: 38%;
+    right: 15%;
+    animation-delay: 0.5s;
+}
+
+.triangle-2 {
+    border-width: 0 25px 43px 25px;
+    border-color: transparent transparent rgba(218, 73, 141, 0.45) transparent;
+    bottom: 40%;
+    right: 48%;
+    animation-delay: 2.5s;
+}
+
+.triangle-3 {
+    border-width: 0 20px 35px 20px;
+    border-color: transparent transparent rgba(250, 198, 122, 0.5) transparent;
+    top: 28%;
+    right: 60%;
+    animation-delay: 1.5s;
+}
+
+.triangle-4 {
+    border-width: 0 28px 48px 28px;
+    border-color: transparent transparent rgba(105, 36, 124, 0.45) transparent;
+    top: 18%;
+    left: 22%;
+    animation-delay: 3.5s;
+}
+
+.triangle-5 {
+    border-width: 0 22px 38px 22px;
+    border-color: transparent transparent rgba(218, 73, 141, 0.5) transparent;
+    bottom: 35%;
+    left: 10%;
+    animation-delay: 4.5s;
+}
+
+/* Contenedor del hero */
+.hero-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Contenido del hero */
+.hero-content {
+    text-align: left;
+    animation: fadeInRight 1s ease;
+}
+
+.hero-subtitle {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+    animation: fadeInDown 0.8s ease;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: var(--color-primary);
+    animation: fadeInDown 1s ease 0.2s;
+    animation-fill-mode: both;
+}
+
+.hero-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    color: var(--color-text-light);
+    max-width: 500px;
+    font-weight: 400;
+    animation: fadeInDown 1s ease 0.4s;
+    animation-fill-mode: both;
+}
+
+/* Botones del hero */
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease 0.6s;
+    animation-fill-mode: both;
+}
+
+.hero-buttons .btn-primary {
+    animation: fadeInUp 1s ease 0.6s, buttonPulse 3s ease-in-out 2s infinite;
+    animation-fill-mode: both;
+}
+
+.hero-buttons .btn-secondary {
+    animation: fadeInUp 1s ease 0.7s;
+    animation-fill-mode: both;
+}
+
+/* Área visual decorativa */
+.hero-visual {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInLeft 1s ease;
+}
+
+.hero-decoration {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.hero-icon {
+    width: 70%;
+    max-width: 400px;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 10px 30px rgba(218, 73, 141, 0.2));
+}

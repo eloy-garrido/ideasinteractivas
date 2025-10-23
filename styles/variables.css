@@ -1,0 +1,42 @@
+/* ========================================
+   VARIABLES Y COLORES
+   ======================================== */
+
+:root {
+    /* Paleta Principal */
+    --color-primary: #69247C;        /* Púrpura oscuro - Elementos principales */
+    --color-secondary: #DA498D;      /* Rosa magenta - Acentos y CTAs */
+    --color-light: #F9E6CF;          /* Beige claro - Fondos */
+    --color-accent: #FAC67A;         /* Dorado suave - Destacados */
+    --color-highlight: #DA498D;      /* Rosa magenta - Interacciones */
+
+    /* Colores auxiliares */
+    --color-white: #ffffff;
+    --color-text: #333333;
+    --color-text-light: #555555;
+    --color-border: #dddddd;
+
+    /* Tipografía */
+    --font-main: 'Comfortaa', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Espaciado */
+    --spacing-xs: 10px;
+    --spacing-sm: 20px;
+    --spacing-md: 30px;
+    --spacing-lg: 50px;
+    --spacing-xl: 100px;
+
+    /* Transiciones */
+    --transition-fast: 0.3s ease;
+    --transition-normal: 0.5s ease;
+
+    /* Sombras */
+    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 5px 15px rgba(105, 36, 124, 0.08);
+    --shadow-lg: 0 15px 30px rgba(218, 73, 141, 0.2);
+
+    /* Border radius */
+    --radius-sm: 5px;
+    --radius-md: 10px;
+    --radius-lg: 50px;
+}

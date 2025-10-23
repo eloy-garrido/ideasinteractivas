@@ -1,7 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(dir /B)"
+      "Bash(dir /B)",
+      "Bash(mkdir -p styles pix js)",
+      "Bash(mv logo4.png pix/logo-header.png)",
+      "Bash(mv logo1.png pix/logo-alt.png)",
+      "Bash(mv \"Recurso 11icono.png\" pix/hero-icon-purple.png)",
+      "Bash(mv \"Recurso 13icono-blanco.png\" pix/hero-icon-white.png)",
+      "Bash(mv icono-morado.png pix/icon-purple.png)",
+      "Bash(mv diseño-hero.jpg pix/hero-design-reference.jpg)",
+      "Bash(mv script.js js/main.js)"
     ],
     "deny": [],
     "ask": []

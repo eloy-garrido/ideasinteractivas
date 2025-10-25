@@ -4,6 +4,52 @@
    ======================================== */
 
 /* ========================================
+   TABLET PEQUEÑA - 600px a 768px
+   ======================================== */
+@media (min-width: 600px) and (max-width: 768px) {
+    /* Hero */
+    .hero-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    /* Mostrar logo alternativo en la parte superior */
+    .mobile-logo {
+        display: block;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+
+/* ========================================
    TABLET - 768px y menores
    ======================================== */
 @media (max-width: 768px) {
@@ -39,7 +85,7 @@
 
     /* Hero */
     .hero-wrapper {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 40px;
     }
 
@@ -272,6 +318,68 @@
 }
 
 /* ========================================
+   TABLET LANDSCAPE / LAPTOP PEQUEÑO - 768px a 991px
+   ======================================== */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 95%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .hero-wrapper {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    /* Mostrar logo alternativo */
+    .mobile-logo {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .hero-content {
+        text-align: center;
+        flex: 1 1 auto;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* ========================================
    TABLET HORIZONTAL - 992px y mayores
    ======================================== */
 @media (min-width: 992px) {
@@ -280,7 +388,89 @@
     }
 
     .hero-title {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+    }
+
+    /* Ajustar hero en pantallas horizontales */
+    .hero-wrapper {
+        gap: 40px;
+        flex-wrap: nowrap;
+    }
+
+    .hero-visual {
+        width: 320px;
+        height: 320px;
+        flex-shrink: 0;
+    }
+
+    .hero-decoration {
+        max-width: 100%;
+    }
+
+    .hero-content {
+        padding-left: 28px;
+        padding-right: 16px;
+        flex: 1 1 auto;
+    }
+
+    .hero-icon {
+        max-width: 220px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .hero-buttons .btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+}
+
+/* ========================================
+   DESKTOP GRANDE - 1200px a 1599px
+   ======================================== */
+@media (min-width: 1200px) and (max-width: 1599px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Limitar tamaño del hero visual en pantallas grandes */
+    .hero-visual {
+        width: 360px;
+        height: 360px;
+        flex-shrink: 0;
+    }
+
+    .hero-decoration {
+        max-width: 100%;
+    }
+
+    .hero-icon {
+        max-width: 240px;
+    }
+
+    .hero-wrapper {
+        gap: 50px;
+    }
+
+    .hero-content {
+        padding-left: 32px;
+        padding-right: 20px;
+        flex: 1 1 auto;
+    }
+
+    .hero-title {
+        font-size: 3.8rem;
     }
 
     .section-title {
@@ -289,9 +479,9 @@
 }
 
 /* ========================================
-   DESKTOP GRANDE - 1200px y mayores
+   DESKTOP MUY GRANDE - 1600px y mayores
    ======================================== */
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
     .container {
         max-width: 1600px;
     }
@@ -300,32 +490,36 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
-    /* Limitar tamaño del hero visual en pantallas grandes */
+    .hero-visual {
+        width: 400px;
+        height: 400px;
+        flex-shrink: 0;
+    }
+
     .hero-decoration {
-        max-width: 550px;
+        max-width: 100%;
     }
 
     .hero-icon {
-        max-width: 450px;
+        max-width: 260px;
     }
-}
 
-/* ========================================
-   PANTALLAS EXTRA GRANDES - 1600px y mayores
-   ======================================== */
-@media (min-width: 1600px) {
-    /* Mantener proporciones óptimas en pantallas muy grandes */
     .hero-wrapper {
-        max-width: 1400px;
-        margin: 0 auto;
+        gap: 60px;
     }
 
-    .hero-decoration {
-        max-width: 500px;
+    .hero-content {
+        padding-left: 40px;
+        padding-right: 24px;
+        flex: 1 1 auto;
     }
 
-    .hero-icon {
-        max-width: 420px;
+    .hero-title {
+        font-size: 4.2rem;
+    }
+
+    .section-title {
+        font-size: 3.2rem;
     }
 }
 

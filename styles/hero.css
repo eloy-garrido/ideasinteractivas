@@ -207,18 +207,24 @@
 
 /* Contenedor del hero */
 .hero-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 60px;
     align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 2;
+    flex-wrap: wrap;
 }
 
 /* Contenido del hero */
 .hero-content {
     text-align: left;
     animation: fadeInRight 1s ease;
+    flex: 1 1 100%;
+    max-width: 550px;
+    padding-left: 32px;
+    padding-right: 16px;
+    min-width: 300px;
 }
 
 .hero-subtitle {
@@ -246,7 +252,7 @@
     line-height: 1.8;
     margin-bottom: 35px;
     color: var(--color-text-light);
-    max-width: 500px;
+    max-width: 100%;
     font-weight: 400;
     animation: fadeInDown 1s ease 0.4s;
     animation-fill-mode: both;
@@ -274,11 +280,13 @@
 /* Área visual decorativa */
 .hero-visual {
     position: relative;
-    height: 500px;
+    height: 280px;
+    width: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
     animation: fadeInLeft 1s ease;
+    flex-shrink: 1;
 }
 
 .hero-decoration {
@@ -288,13 +296,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 500px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .hero-icon {
-    width: 70%;
-    max-width: 400px;
+    width: 90%;
+    max-width: 200px;
     height: auto;
     animation: float 3s ease-in-out infinite;
     filter: drop-shadow(0 10px 30px rgba(218, 73, 141, 0.2));

@@ -4,8 +4,8 @@
 
 /* Sección Servicios */
 #servicios {
-    padding: var(--spacing-xl) 0;
-    background-color: var(--color-white);
+    padding: 0px 0 var(--spacing-xl) 0;
+    background: linear-gradient(to bottom, var(--color-white) 0%, #EEC5B9 100%);
 }
 
 .services-grid {
@@ -16,20 +16,35 @@
 
 /* Sección Nosotros */
 #nosotros {
-    padding: var(--spacing-xl) 0;
-    background-color: var(--color-accent);
+    padding-top: 0px;
+    padding-bottom: 200px;
+    background-image: url('../pix/fondo-servicios.svg');
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    overflow: hidden;
 }
+
+
 
 .about-content {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-lg);
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .about-text {
     flex: 1;
     min-width: 300px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .about-text p {
@@ -49,7 +64,17 @@
 /* Sección Contacto */
 #contacto {
     padding: var(--spacing-xl) 0;
-    background-color: var(--color-white);
+    background: linear-gradient(to bottom, #281F32 0%, #000000 100%);
+}
+
+#contacto h2,
+#contacto h3 {
+    color: var(--color-white);
+}
+
+#contacto p,
+#contacto a {
+    color: #E0E0E0;
 }
 
 .contact-container {
@@ -58,8 +83,7 @@
     gap: var(--spacing-lg);
 }
 
-.contact-info,
-.contact-form {
+.contact-info {
     flex: 1;
     min-width: 300px;
 }
@@ -72,7 +96,7 @@
 
 .info-item i {
     font-size: 1.5rem;
-    color: var(--color-secondary);
+    color: #B8A5C7;
     margin-right: 15px;
     width: 30px;
     text-align: center;
@@ -80,7 +104,7 @@
 
 /* Footer */
 footer {
-    background-color: var(--color-primary);
+    background-color: #000000;
     color: var(--color-white);
     text-align: center;
     padding: var(--spacing-sm) 0;

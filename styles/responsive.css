@@ -180,8 +180,8 @@
 
     /* Grid de servicios */
     .services-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-sm);
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
     }
 
     /* Estadísticas */
@@ -280,7 +280,7 @@
     #servicios,
     #nosotros,
     #contacto {
-        padding: 60px 0;
+        padding: 0px;
     }
 
     /* Service cards */
@@ -317,13 +317,6 @@
 
     .logo h1 {
         font-size: 1.5rem;
-    }
-
-    /* Formulario */
-    .form-group input,
-    .form-group textarea {
-        padding: 10px;
-        font-size: 0.95rem;
     }
 
     /* Íconos de redes sociales */

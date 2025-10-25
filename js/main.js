@@ -30,25 +30,50 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Formulario de contacto
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+// Animación de conteo de números en estadísticas
+function animateCounters() {
+    const stats = document.querySelectorAll('.stat-number');
+    let hasAnimated = false;
 
-        // Obtener valores
-        const nombre = document.getElementById('nombre').value;
-        const email = document.getElementById('email').value;
-        const asunto = document.getElementById('asunto').value;
-        const mensaje = document.getElementById('mensaje').value;
+    // Usar Intersection Observer para animar cuando se vea la sección
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasAnimated) {
+                hasAnimated = true;
+                stats.forEach(stat => {
+                    const target = parseInt(stat.textContent);
+                    const duration = 2000; // 2 segundos
+                    const increment = target / (duration / 16); // 60fps
+                    let current = 0;
 
-        // Aquí puedes agregar la lógica para enviar el formulario
-        console.log('Formulario enviado:', { nombre, email, asunto, mensaje });
+                    // Agregar clase para animación CSS
+                    stat.classList.add('counting');
 
-        // Mostrar mensaje de confirmación
-        alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            stat.textContent = target + '+';
+                            clearInterval(timer);
+                        } else {
+                            stat.textContent = Math.floor(current) + '+';
+                        }
+                    }, 16); // ~60fps
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
 
-        // Limpiar formulario
-        contactForm.reset();
-    });
+    const aboutSection = document.querySelector('#nosotros');
+    if (aboutSection) {
+        observer.observe(aboutSection);
+    }
 }
+
+// Inicializar contadores cuando el DOM esté listo
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', animateCounters);
+} else {
+    animateCounters();
+}
+

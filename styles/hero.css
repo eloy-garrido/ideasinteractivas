@@ -3,14 +3,15 @@
    ======================================== */
 
 #hero {
-    height: 100vh;
+    height: calc(100vh - 70px);
     background: #f9f7f3;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     padding: 0;
-    margin-top: 40px;
+    margin-top: 70px;
 }
 
 
@@ -56,71 +57,71 @@
     height: 100%;
     z-index: 1;
     overflow: hidden;
+    clip-path: inset(0 0 0 0);
 }
 
 .shape {
     position: absolute;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    opacity: 0.5;
-    animation: float 20s infinite ease-in-out;
+    opacity: 1;
 }
 
 .shape-1 {
     width: 280px;
     height: 280px;
-    background: linear-gradient(135deg, rgba(218, 73, 141, 0.4), rgba(105, 36, 124, 0.3));
+    background: linear-gradient(135deg, rgba(232, 180, 208, 0.6), rgba(210, 144, 183, 0.6));
     top: 5%;
     right: 8%;
-    animation-delay: 0s;
+    animation: shapeZoomIn 0.8s ease-out 0.1s both, float 30s infinite ease-in-out 0.9s;
 }
 
 .shape-2 {
     width: 250px;
     height: 250px;
-    background: linear-gradient(135deg, rgba(218, 73, 141, 0.35), rgba(250, 198, 122, 0.3));
+    background: linear-gradient(135deg, rgba(245, 213, 200, 0.6), rgba(232, 191, 168, 0.6));
     bottom: 12%;
     right: 20%;
     border-radius: 50% 50% 50% 50%;
-    animation-delay: 2s;
+    animation: shapeZoomIn 0.8s ease-out 0.3s both, float 30s infinite ease-in-out 1.1s;
 }
 
 .shape-3 {
     width: 220px;
     height: 220px;
-    background: linear-gradient(135deg, rgba(105, 36, 124, 0.3), rgba(218, 73, 141, 0.25));
+    background: linear-gradient(135deg, rgba(212, 165, 212, 0.6), rgba(201, 155, 196, 0.6));
     top: 45%;
     right: 35%;
-    animation-delay: 4s;
+    animation: shapeZoomIn 0.8s ease-out 0.5s both, float 30s infinite ease-in-out 1.3s;
 }
 
 .shape-4 {
     width: 150px;
     height: 350px;
-    background: linear-gradient(135deg, rgba(250, 198, 122, 0.3), rgba(218, 73, 141, 0.2));
+    background: linear-gradient(135deg, rgba(242, 201, 160, 0.6), rgba(230, 184, 138, 0.6));
     top: 8%;
     right: 28%;
     border-radius: 40% 60% 60% 40% / 70% 70% 30% 30%;
-    animation-delay: 1s;
+    animation: shapeZoomIn 0.8s ease-out 0.2s both, float 30s infinite ease-in-out 1s;
 }
 
 .shape-5 {
     width: 260px;
     height: 260px;
-    background: linear-gradient(135deg, rgba(105, 36, 124, 0.35), rgba(250, 198, 122, 0.25));
+    background: linear-gradient(135deg, rgba(229, 197, 232, 0.6), rgba(212, 174, 216, 0.6));
     top: 25%;
     left: 8%;
     border-radius: 50% 50% 50% 50%;
-    animation-delay: 3s;
+    animation: shapeZoomIn 0.8s ease-out 0.4s both, float 30s infinite ease-in-out 1.2s;
 }
 
 .shape-6 {
     width: 200px;
     height: 200px;
-    background: linear-gradient(135deg, rgba(218, 73, 141, 0.3), rgba(105, 36, 124, 0.25));
+    background: linear-gradient(135deg, rgba(240, 208, 226, 0.6), rgba(227, 187, 211, 0.6));
     bottom: 20%;
     left: 18%;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    animation-delay: 5s;
+    animation: shapeZoomIn 0.8s ease-out 0.6s both, float 30s infinite ease-in-out 1.4s;
 }
 
 /* Puntos decorativos */
@@ -128,33 +129,32 @@
     position: absolute;
     width: 120px;
     height: 120px;
-    background-image: radial-gradient(circle, rgba(218, 73, 141, 0.3) 2px, transparent 2px);
+    background-image: radial-gradient(circle, rgba(218, 73, 141, 0.4) 2px, transparent 2px);
     background-size: 15px 15px;
-    animation: float 15s infinite ease-in-out;
 }
 
 .dots-1 {
     top: 18%;
     right: 45%;
-    animation-delay: 1s;
+    animation: shapeZoomIn 0.8s ease-out 0.7s both, float 28s infinite ease-in-out 1.5s;
 }
 
 .dots-2 {
     bottom: 25%;
     right: 10%;
-    animation-delay: 3s;
+    animation: shapeZoomIn 0.8s ease-out 0.9s both, float 28s infinite ease-in-out 1.7s;
 }
 
 .dots-3 {
     top: 65%;
     right: 55%;
-    animation-delay: 2s;
+    animation: shapeZoomIn 0.8s ease-out 0.5s both, float 28s infinite ease-in-out 1.3s;
 }
 
 .dots-4 {
     top: 55%;
     left: 12%;
-    animation-delay: 4s;
+    animation: shapeZoomIn 0.8s ease-out 0.8s both, float 28s infinite ease-in-out 1.6s;
 }
 
 /* Triángulos decorativos */
@@ -163,8 +163,7 @@
     width: 0;
     height: 0;
     border-style: solid;
-    opacity: 0.2;
-    animation: float 18s infinite ease-in-out;
+    opacity: 0.25;
 }
 
 .triangle-1 {
@@ -172,7 +171,7 @@
     border-color: transparent transparent rgba(105, 36, 124, 0.5) transparent;
     top: 38%;
     right: 15%;
-    animation-delay: 0.5s;
+    animation: shapeZoomIn 0.8s ease-out 0.3s both, float 32s infinite ease-in-out 1.1s;
 }
 
 .triangle-2 {
@@ -180,7 +179,7 @@
     border-color: transparent transparent rgba(218, 73, 141, 0.45) transparent;
     bottom: 40%;
     right: 48%;
-    animation-delay: 2.5s;
+    animation: shapeZoomIn 0.8s ease-out 0.5s both, float 32s infinite ease-in-out 1.3s;
 }
 
 .triangle-3 {
@@ -188,7 +187,7 @@
     border-color: transparent transparent rgba(250, 198, 122, 0.5) transparent;
     top: 28%;
     right: 60%;
-    animation-delay: 1.5s;
+    animation: shapeZoomIn 0.8s ease-out 0.7s both, float 32s infinite ease-in-out 1.5s;
 }
 
 .triangle-4 {
@@ -196,7 +195,7 @@
     border-color: transparent transparent rgba(105, 36, 124, 0.45) transparent;
     top: 18%;
     left: 22%;
-    animation-delay: 3.5s;
+    animation: shapeZoomIn 0.8s ease-out 0.9s both, float 32s infinite ease-in-out 1.7s;
 }
 
 .triangle-5 {
@@ -204,7 +203,7 @@
     border-color: transparent transparent rgba(218, 73, 141, 0.5) transparent;
     bottom: 35%;
     left: 10%;
-    animation-delay: 4.5s;
+    animation: shapeZoomIn 0.8s ease-out 1s both, float 32s infinite ease-in-out 1.8s;
 }
 
 /* Contenedor del hero */
@@ -287,7 +286,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: fadeInLeft 1s ease;
     flex-shrink: 1;
 }
 
@@ -307,7 +305,6 @@
     width: 90%;
     max-width: 200px;
     height: auto;
-    animation: heroIconEntrance 1s ease-out 100ms forwards, float 3s ease-in-out 1.1s infinite;
     filter: drop-shadow(0 10px 30px rgba(218, 73, 141, 0.2));
     position: relative;
     z-index: 2;

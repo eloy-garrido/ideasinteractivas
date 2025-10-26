@@ -767,6 +767,115 @@
 }
 
 /* ========================================
+   SHAPES RESPONSIVOS - PANTALLAS MÁS GRANDES
+   ======================================== */
+
+/* Aumentar tamaño de shapes en pantallas grandes */
+@media (min-width: 1200px) {
+    .shape-1 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .shape-2 {
+        width: 320px;
+        height: 320px;
+    }
+
+    .shape-3 {
+        width: 280px;
+        height: 280px;
+    }
+
+    .shape-4 {
+        width: 200px;
+        height: 400px;
+    }
+
+    .shape-5 {
+        width: 330px;
+        height: 330px;
+    }
+
+    .shape-6 {
+        width: 270px;
+        height: 270px;
+    }
+
+    .dots {
+        width: 160px;
+        height: 160px;
+        background-size: 18px 18px;
+    }
+
+    .triangle-1,
+    .triangle-4 {
+        border-width: 0 40px 70px 40px;
+    }
+
+    .triangle-2,
+    .triangle-5 {
+        border-width: 0 35px 60px 35px;
+    }
+
+    .triangle-3 {
+        border-width: 0 28px 48px 28px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .shape-1 {
+        width: 420px;
+        height: 420px;
+    }
+
+    .shape-2 {
+        width: 380px;
+        height: 380px;
+    }
+
+    .shape-3 {
+        width: 340px;
+        height: 340px;
+    }
+
+    .shape-4 {
+        width: 240px;
+        height: 450px;
+    }
+
+    .shape-5 {
+        width: 400px;
+        height: 400px;
+    }
+
+    .shape-6 {
+        width: 330px;
+        height: 330px;
+    }
+
+    .dots {
+        width: 200px;
+        height: 200px;
+        background-size: 22px 22px;
+    }
+
+    .triangle-1,
+    .triangle-4 {
+        border-width: 0 50px 85px 50px;
+    }
+
+    .triangle-2,
+    .triangle-5 {
+        border-width: 0 42px 72px 42px;
+    }
+
+    .triangle-3 {
+        border-width: 0 35px 60px 35px;
+    }
+}
+
+/* ========================================
    IMPRESIÓN
    ======================================== */
 @media print {

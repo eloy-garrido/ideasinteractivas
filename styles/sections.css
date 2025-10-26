@@ -16,13 +16,14 @@
 
 /* Sección Nosotros */
 #nosotros {
-    padding-top: 0px;
-    padding-bottom: 200px;
-    background-image: url('../pix/fondo-servicios.svg');
-    background-size: cover;
-    background-position: center top;
+padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url(../pix/fondo-about.png);
+    background-position: center bottom;
     position: relative;
     overflow: hidden;
+    background-repeat: repeat-x;
+    background-color: #EEC5B9;
 }
 
 

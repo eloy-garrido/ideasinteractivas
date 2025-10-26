@@ -8,9 +8,11 @@
     display: flex;
     align-items: center;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     padding: 0;
+    margin-top: 40px;
 }
+
 
 /* Logo móvil en la parte superior */
 .mobile-logo {

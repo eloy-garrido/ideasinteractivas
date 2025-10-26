@@ -167,6 +167,10 @@
         animation: none;
     }
 
+    #hero {
+        margin-top: 40px;
+    }
+
     /* Títulos de sección */
     .section-title {
         font-size: 2rem;

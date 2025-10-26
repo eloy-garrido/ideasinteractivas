@@ -10,6 +10,8 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
 }
 
 header .container {
@@ -71,3 +73,23 @@ nav ul li a:hover::after {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+/* ========================================
+   NAVBAR WAVE DIVIDER
+   ======================================== */
+
+.navbar-wave-divider {
+    width: 100%;
+    height: 80px;
+    pointer-events: none;
+    position: relative;
+    z-index: 1001;
+    margin-bottom: -90px;
+}
+
+.navbar-wave-divider svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+

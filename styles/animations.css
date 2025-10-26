@@ -139,3 +139,19 @@
 .stat-number.counting {
     animation: countUp 0.6s ease-out forwards;
 }
+
+/* Animación de entrada para el hero icon */
+@keyframes heroIconEntrance {
+    0% {
+        opacity: 0;
+        transform: scale(0.6) rotate(-15deg);
+    }
+    70% {
+        transform: scale(1.05) rotate(5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+

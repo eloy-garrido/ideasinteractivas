@@ -77,3 +77,145 @@ if (document.readyState === 'loading') {
     animateCounters();
 }
 
+
+// Animación de entrada del hero-content con Anime.js - profesional y suave
+function initHeroContentAnimation() {
+    const heroTitle = document.querySelector('.hero-title');
+    const heroDescription = document.querySelector('.hero-description');
+    const heroButtons = document.querySelector('.hero-buttons');
+
+    // Crear timeline maestro para toda la secuencia de entrada
+    const contentTimeline = anime.timeline({
+        delay: 250
+    });
+
+    // === ENTRADA: TÍTULO CON FADE + SLIDE ===
+    if (heroTitle) {
+        contentTimeline.add({
+            targets: heroTitle,
+            opacity: [0, 1],
+            translateY: [30, 0],
+            duration: 900,
+            easing: 'easeOutCubic'
+        }, 0);
+    }
+
+    // === ENTRADA: DESCRIPCIÓN CON DELAY CASCADA ===
+    if (heroDescription) {
+        contentTimeline.add({
+            targets: heroDescription,
+            opacity: [0, 1],
+            translateY: [20, 0],
+            duration: 800,
+            easing: 'easeOutCubic'
+        }, 200);
+    }
+
+    // === ENTRADA: BOTONES CON STAGGER Y ESCALA ===
+    if (heroButtons) {
+        const buttons = heroButtons.querySelectorAll('.btn');
+
+        contentTimeline.add({
+            targets: buttons,
+            opacity: [0, 1],
+            translateY: [15, 0],
+            scale: [0.95, 1],
+            duration: 700,
+            easing: 'easeOutCubic',
+            delay: anime.stagger(120, { start: 0 })
+        }, 400);
+
+        // === ANIMACIÓN PASIVA: HOVER SUAVE EN BOTONES ===
+        buttons.forEach((button) => {
+            button.addEventListener('mouseenter', () => {
+                anime({
+                    targets: button,
+                    scale: 1.05,
+                    boxShadow: '0 8px 20px rgba(105, 36, 124, 0.25)',
+                    duration: 300,
+                    easing: 'easeOutQuad'
+                });
+            });
+
+            button.addEventListener('mouseleave', () => {
+                anime({
+                    targets: button,
+                    scale: 1,
+                    boxShadow: '0 0px 0px rgba(105, 36, 124, 0)',
+                    duration: 300,
+                    easing: 'easeOutQuad'
+                });
+            });
+        });
+    }
+}
+
+// Animación de hover en tarjetas de servicios
+function initServiceCardsAnimation() {
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            anime.set(card, {
+                zIndex: 10
+            });
+
+            anime({
+                targets: card,
+                scale: 1.05,
+                boxShadow: '0 20px 40px rgba(138, 43, 226, 0.4)',
+                translateY: -10,
+                duration: 400,
+                easing: 'easeOutQuad'
+            });
+
+            // Animar el ícono
+            const icon = card.querySelector('i');
+            if (icon) {
+                anime({
+                    targets: icon,
+                    scale: 1.2,
+                    rotate: 10,
+                    duration: 400,
+                    easing: 'easeOutQuad'
+                });
+            }
+        });
+
+        card.addEventListener('mouseleave', () => {
+            anime({
+                targets: card,
+                scale: 1,
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
+                translateY: 0,
+                duration: 400,
+                easing: 'easeOutQuad'
+            });
+
+            // Resetear ícono
+            const icon = card.querySelector('i');
+            if (icon) {
+                anime({
+                    targets: icon,
+                    scale: 1,
+                    rotate: 0,
+                    duration: 400,
+                    easing: 'easeOutQuad'
+                });
+            }
+        });
+    });
+}
+
+// Inicializar todas las animaciones cuando el DOM esté listo
+function initAllAnimations() {
+    initHeroContentAnimation();
+    initServiceCardsAnimation();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAllAnimations);
+} else {
+    initAllAnimations();
+}
+

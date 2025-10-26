@@ -2,21 +2,247 @@
    SECCIONES DEL SITIO
    ======================================== */
 
+/* Sección Sobre Nosotros */
+#nosotros {
+    padding: var(--spacing-xl) 0;
+    position: relative;
+    background: #FBECC1;
+}
+
+.about-intro {
+    position: relative;
+    z-index: 1;
+}
+
+.about-intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.about-intro-text h3 {
+    font-size: 1.8rem;
+    color: #281F32;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.about-intro-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.about-intro-highlight {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.highlight-box {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: var(--radius-md);
+    border-left: 4px solid #B8437A;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.highlight-box:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.highlight-box i {
+    font-size: 2rem;
+    color: #B8437A;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.highlight-box h4 {
+    color: #281F32;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.highlight-box p {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.about-approach {
+    margin-top: 40px;
+}
+
+.about-approach h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #281F32;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.approach-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    position: relative;
+}
+
+.approach-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.approach-number {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #B8437A 0%, #D94BA5 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+
+.approach-card h4 {
+    color: #281F32;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.approach-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
 /* Sección Servicios */
 #servicios {
-    padding: 0px 0 var(--spacing-xl) 0;
-    background: linear-gradient(to bottom, var(--color-white) 0%, #EEC5B9 100%);
+    padding: 0;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+#servicios .container {
+    padding-top: var(--spacing-xl);
+}
+
+.services-intro {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #555;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-md);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
 }
 
-/* Sección Nosotros */
-#nosotros {
-padding-top: 100px;
+.service-card {
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: var(--radius-md);
+    border: 2px solid #F0E6D8;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #B8437A 0%, #D94BA5 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border-color: #E0D0C0;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card i {
+    font-size: 2.8rem;
+    color: #B8437A;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.service-card h3 {
+    color: #281F32;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.servicios-wave-divider {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    margin-top: 40px;
+}
+
+.servicios-wave-divider svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-height: 80px;
+}
+
+/* Sección Trayectoria */
+#trayectoria {
+    padding-top: 100px;
     padding-bottom: 100px;
     background-image: url(../pix/fondo-about.png);
     background-position: center bottom;
@@ -40,17 +266,43 @@ padding-top: 100px;
 .about-text {
     flex: 1;
     min-width: 300px;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: var(--spacing-md);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 35px;
     border-radius: var(--radius-md);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #B8437A 0%, #D94BA5 100%);
 }
 
 .about-text p {
-    margin-bottom: var(--spacing-sm);
-    font-size: 1.1rem;
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+    position: relative;
+    z-index: 1;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-text strong {
+    color: #281F32;
+    font-weight: 600;
 }
 
 .about-stats {
@@ -101,6 +353,65 @@ padding-top: 100px;
     margin-right: 15px;
     width: 30px;
     text-align: center;
+}
+
+/* Especialidades - Trayectoria */
+.trajectory-highlights {
+    margin-top: 60px;
+    z-index: 1;
+    position: relative;
+}
+
+.trajectory-highlights h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #281F32;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.highlight-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.highlight-card i {
+    font-size: 2.5rem;
+    color: #B8437A;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.highlight-card h4 {
+    color: #281F32;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.highlight-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 /* Footer */

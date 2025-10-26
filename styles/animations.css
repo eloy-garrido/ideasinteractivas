@@ -167,18 +167,6 @@
     }
 }
 
-/* Keyframes para zoomIn de shapes */
-@keyframes shapeZoomIn {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 /* Keyframes para rotateIn */
 @keyframes rotateIn {
     0% {
@@ -191,62 +179,10 @@
     }
 }
 
-/* Keyframes para tada */
-@keyframes tada {
-    0%, 100% {
-        transform: scale(1) rotate(0deg);
-    }
-    10%, 20% {
-        transform: scale(0.9) rotate(-3deg);
-    }
-    30%, 50%, 70%, 90% {
-        transform: scale(1.1) rotate(3deg);
-    }
-    40%, 60%, 80% {
-        transform: scale(1.1) rotate(-3deg);
-    }
-}
-
-/* Keyframes para rubberBand */
-@keyframes rubberBand {
-    0%, 100% {
-        transform: scaleX(1);
-    }
-    30% {
-        transform: scaleX(1.25) scaleY(0.75);
-    }
-    40% {
-        transform: scaleX(0.75) scaleY(1.25);
-    }
-    50% {
-        transform: scaleX(1.15) scaleY(0.85);
-    }
-    65% {
-        transform: scaleX(0.95) scaleY(1.05);
-    }
-    75% {
-        transform: scaleX(1.05) scaleY(0.95);
-    }
-}
 
 /* Animación en cascada para el hero icon */
 .hero-icon-animation-wrapper {
     animation: zoomIn 1s ease-out 0s forwards,
-              tada 1s ease-in-out 1s forwards,
-              rubberBand 1s ease-in-out 2s forwards,
-              pulse 2s ease-in-out 3.3s infinite forwards;
-}
-
-/* Animaciones para shapes después de que WOW.js aplique zoomIn */
-.shape.wow.animated {
-    animation: float 30s infinite ease-in-out 0.8s !important;
-}
-
-.dots.wow.animated {
-    animation: float 28s infinite ease-in-out 0.8s !important;
-}
-
-.triangle.wow.animated {
-    animation: float 32s infinite ease-in-out 0.8s !important;
+              pulse 2s ease-in-out 1s infinite forwards;
 }
 

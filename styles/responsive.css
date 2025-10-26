@@ -20,6 +20,11 @@
     /* Mostrar logo alternativo en la parte superior */
     .mobile-logo {
         display: block;
+        margin-bottom: 2rem;
+    }
+
+    .mobile-logo img {
+        height: 130px;
     }
 
     .hero-content {
@@ -53,6 +58,11 @@
    TABLET - 768px y menores
    ======================================== */
 @media (max-width: 768px) {
+    /* Hero */
+    #hero {
+        margin-top: 0px;
+    }
+
     /* Navegación móvil */
     .menu-toggle {
         display: block;
@@ -62,7 +72,7 @@
         position: absolute;
         top: 70px;
         left: 0;
-        background-color: var(--color-primary);
+        background-color: rgba(255, 255, 255, 0.7);
         width: 100%;
         padding: var(--spacing-sm);
         transform: translateY(-150%);
@@ -83,6 +93,10 @@
         text-align: center;
     }
 
+    nav ul li a {
+        color: var(--color-primary);
+    }
+
     /* Hero */
     .hero-wrapper {
         flex-direction: column;
@@ -92,10 +106,15 @@
     .hero-visual {
         display: none;
     }
-    
+
     /* Mostrar logo alternativo en la parte superior */
     .mobile-logo {
         display: block;
+        margin-bottom: 2rem;
+    }
+
+    .mobile-logo img {
+        height: 120px;
     }
 
     .hero-content {
@@ -124,51 +143,13 @@
         text-align: center;
     }
 
-    /* Formas decorativas - reducir tamaño en móvil */
-    .shape-1, .shape-2 {
-        width: 180px;
-        height: 180px;
-    }
-
-    .shape-3, .shape-4 {
-        width: 120px;
-        height: 250px;
-    }
-
-    .shape-5, .shape-6 {
-        width: 160px;
-        height: 160px;
-    }
-
-    .dots {
-        width: 80px;
-        height: 80px;
-        background-size: 10px 10px;
-    }
-
-    .triangle {
-        opacity: 0.15;
-    }
-
-    .triangle-1, .triangle-4 {
-        border-width: 0 20px 35px 20px;
-    }
-
-    .triangle-2, .triangle-5 {
-        border-width: 0 15px 26px 15px;
-    }
-
-    .triangle-3 {
-        border-width: 0 12px 21px 12px;
-    }
-
     /* Desactivar animación de wave en móvil para mejor performance */
     .hero-wave-divider svg {
         animation: none;
     }
 
     #hero {
-        margin-top: 40px;
+        margin-top: 0px;
     }
 
     /* Títulos de sección */
@@ -176,16 +157,35 @@
         font-size: 2rem;
     }
 
+    .servicios-wave-divider {
+        margin-top: 20px;
+        margin-bottom: -20px;
+    }
+
+    .servicios-wave-divider svg {
+        min-height: 70px;
+    }
+
     /* Secciones */
     .about-content,
-    .contact-container {
+    .contact-container,
+    .about-intro-content {
         flex-direction: column;
+    }
+
+    .about-intro-content {
+        grid-template-columns: 1fr;
     }
 
     /* Grid de servicios */
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-md);
+    }
+
+    .services-intro {
+        font-size: 1rem;
+        margin-bottom: 30px;
     }
 
     /* Estadísticas */
@@ -215,8 +215,9 @@
 
     /* Hero */
     #hero {
-        padding: 80px 0 50px;
-        min-height: auto;
+        height: auto;
+        min-height: calc(100vh - 70px);
+        padding: 120px 0 80px;
     }
 
     .mobile-logo {
@@ -224,7 +225,8 @@
     }
 
     .mobile-logo img {
-        height: 70px;
+        height: 200px;
+        animation: float 4s ease-in-out infinite;
     }
 
     .hero-title {
@@ -252,28 +254,6 @@
         font-size: 0.85rem;
     }
 
-    /* Reducir aún más las formas decorativas */
-    .shape-1, .shape-2 {
-        width: 120px;
-        height: 120px;
-    }
-
-    .shape-3, .shape-4 {
-        width: 80px;
-        height: 180px;
-    }
-
-    .shape-5, .shape-6 {
-        width: 100px;
-        height: 100px;
-    }
-
-    /* Ocultar algunos elementos decorativos en móviles pequeños */
-    .dots-3, .dots-4,
-    .triangle-3, .triangle-4, .triangle-5 {
-        display: none;
-    }
-
     /* Títulos */
     .section-title {
         font-size: 1.75rem;
@@ -282,9 +262,43 @@
 
     /* Secciones */
     #servicios,
-    #nosotros,
+    #trayectoria,
     #contacto {
         padding: 0px;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trajectory-highlights h3 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .about-intro-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .about-approach h3 {
+        font-size: 1.5rem;
+    }
+
+    .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    .approach-card {
+        padding: 20px;
+    }
+
+    .approach-card h4 {
+        font-size: 1.1rem;
+    }
+
+    .approach-card p {
+        font-size: 0.9rem;
     }
 
     /* Service cards */
@@ -293,11 +307,22 @@
     }
 
     .service-card i {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        margin-bottom: 15px;
     }
 
     .service-card h3 {
         font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+
+    .services-intro {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
     }
 
     /* Estadísticas */
@@ -312,6 +337,49 @@
 
     .stat-text {
         font-size: 0.8rem;
+    }
+
+    /* Sobre Nosotros Mobile */
+    .about-intro-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .about-intro-text p {
+        font-size: 0.95rem;
+    }
+
+    .highlight-box {
+        padding: 20px;
+    }
+
+    .highlight-box i {
+        font-size: 1.5rem;
+    }
+
+    .highlight-box h4 {
+        font-size: 1.05rem;
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .approach-card {
+        padding: 15px;
+    }
+
+    .approach-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .servicios-wave-divider {
+        margin-top: 0;
+    }
+
+    .servicios-wave-divider svg {
+        min-height: 60px;
     }
 
     /* Logo */
@@ -356,6 +424,10 @@
     .mobile-logo {
         display: block;
         margin-bottom: 20px;
+    }
+
+    .mobile-logo img {
+        height: 110px;
     }
 
     .hero-content {
@@ -456,7 +528,7 @@
     }
 
     .services-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     /* Limitar tamaño del hero visual en pantallas grandes */
@@ -502,7 +574,7 @@
     }
 
     .services-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .hero-visual {
@@ -647,21 +719,6 @@
         font-size: 1.8rem;
     }
 
-    /* Reducir formas decorativas */
-    .shape {
-        transform: scale(0.5);
-    }
-
-    .dots {
-        width: 60px;
-        height: 60px;
-        background-size: 8px 8px;
-    }
-
-    .triangle {
-        opacity: 0.1;
-    }
-
     .hero-wave-divider svg {
         animation: none;
     }
@@ -746,132 +803,8 @@
         font-size: 1.6rem;
     }
 
-    /* Reducir formas decorativas */
-    .shape {
-        transform: scale(0.5);
-    }
-
-    .dots {
-        width: 60px;
-        height: 60px;
-        background-size: 8px 8px;
-    }
-
-    .triangle {
-        opacity: 0.08;
-    }
-
     .hero-wave-divider svg {
         animation: none;
-    }
-}
-
-/* ========================================
-   SHAPES RESPONSIVOS - PANTALLAS MÁS GRANDES
-   ======================================== */
-
-/* Aumentar tamaño de shapes en pantallas grandes */
-@media (min-width: 1200px) {
-    .shape-1 {
-        width: 350px;
-        height: 350px;
-    }
-
-    .shape-2 {
-        width: 320px;
-        height: 320px;
-    }
-
-    .shape-3 {
-        width: 280px;
-        height: 280px;
-    }
-
-    .shape-4 {
-        width: 200px;
-        height: 400px;
-    }
-
-    .shape-5 {
-        width: 330px;
-        height: 330px;
-    }
-
-    .shape-6 {
-        width: 270px;
-        height: 270px;
-    }
-
-    .dots {
-        width: 160px;
-        height: 160px;
-        background-size: 18px 18px;
-    }
-
-    .triangle-1,
-    .triangle-4 {
-        border-width: 0 40px 70px 40px;
-    }
-
-    .triangle-2,
-    .triangle-5 {
-        border-width: 0 35px 60px 35px;
-    }
-
-    .triangle-3 {
-        border-width: 0 28px 48px 28px;
-    }
-}
-
-@media (min-width: 1600px) {
-    .shape-1 {
-        width: 420px;
-        height: 420px;
-    }
-
-    .shape-2 {
-        width: 380px;
-        height: 380px;
-    }
-
-    .shape-3 {
-        width: 340px;
-        height: 340px;
-    }
-
-    .shape-4 {
-        width: 240px;
-        height: 450px;
-    }
-
-    .shape-5 {
-        width: 400px;
-        height: 400px;
-    }
-
-    .shape-6 {
-        width: 330px;
-        height: 330px;
-    }
-
-    .dots {
-        width: 200px;
-        height: 200px;
-        background-size: 22px 22px;
-    }
-
-    .triangle-1,
-    .triangle-4 {
-        border-width: 0 50px 85px 50px;
-    }
-
-    .triangle-2,
-    .triangle-5 {
-        border-width: 0 42px 72px 42px;
-    }
-
-    .triangle-3 {
-        border-width: 0 35px 60px 35px;
     }
 }
 
@@ -886,7 +819,7 @@
     .hero-wave-divider,
     .social-media,
     footer {
-        display: none;
+        display: none !important;
     }
 
     /* Optimizar para impresión */

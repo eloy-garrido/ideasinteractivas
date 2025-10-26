@@ -9,6 +9,8 @@
     --color-light: #F9E6CF;          /* Beige claro - Fondos */
     --color-accent: #FAC67A;         /* Dorado suave - Destacados */
     --color-highlight: #DA498D;      /* Rosa magenta - Interacciones */
+    --color-beige-warm: #FBECC1;     /* Beige cálido - Navbar y elementos decorativos */
+    --color-caramel: #D4A574;        /* Caramelo - Wave dividers y acentos */
 
     /* Colores auxiliares */
     --color-white: #ffffff;

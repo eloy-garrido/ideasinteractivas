@@ -64,9 +64,14 @@ function animateCounters() {
         });
     }, { threshold: 0.5 });
 
-    const aboutSection = document.querySelector('#nosotros');
+    // Buscar secciones que contengan estadísticas
+    const aboutSection = document.querySelector('#trayectoria');
+    const nosotrosSection = document.querySelector('#nosotros');
+
     if (aboutSection) {
         observer.observe(aboutSection);
+    } else if (nosotrosSection) {
+        observer.observe(nosotrosSection);
     }
 }
 
@@ -204,6 +209,19 @@ function initServiceCardsAnimation() {
                 });
             }
         });
+    });
+}
+
+// Glassmorphism en navbar al hacer scroll
+const header = document.querySelector('header');
+
+if (header) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
     });
 }
 

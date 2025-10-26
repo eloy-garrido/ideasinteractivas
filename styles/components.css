@@ -202,31 +202,51 @@
 /* Estadísticas */
 .stat {
     text-align: center;
-    padding: var(--spacing-sm);
-    background-color: var(--color-white);
+    padding: 25px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    width: 150px;
-    border: 2px solid transparent;
-    transition: var(--transition-fast);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: auto;
+    min-width: 160px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #B8437A 0%, #D94BA5 100%);
 }
 
 .stat:hover {
-    border-color: var(--color-secondary);
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(218, 73, 141, 0.15);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(218, 73, 141, 0.15);
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .stat-number {
     display: block;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: bold;
-    color: var(--color-highlight);
+    color: #B8437A;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 .stat-text {
-    font-size: 0.9rem;
-    color: var(--color-primary);
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 500;
+    line-height: 1.4;
 }
 
 /* Redes sociales */

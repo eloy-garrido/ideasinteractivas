@@ -3,21 +3,22 @@
    ======================================== */
 
 #hero {
-    height: calc(100vh - 70px);
-    background: #f9f7f3;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--color-light) 0%, #FFD4E5 25%, #FAC67A 50%, #F5D5A8 75%, var(--color-light) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
     padding: 0;
-    margin-top: 70px;
+    padding-top: 70px;
+    box-sizing: border-box;
 }
 
 
 /* Logo móvil en la parte superior */
 .mobile-logo {
-    display: none;
+    display: block;
     width: 100%;
     text-align: center;
     z-index: 5;
@@ -25,185 +26,102 @@
 }
 
 .mobile-logo img {
-    height: 80px;
+    height: 400px;
     width: auto;
     margin: 0 auto;
+    animation: float 4s ease-in-out infinite;
 }
 
 /* Wave divisoria al final del hero */
 .hero-wave-divider {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
-    height: 120px;
+    height: auto;
     z-index: 3;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .hero-wave-divider svg {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
-    animation: waveDivider 8s ease-in-out infinite;
+    min-height: 120px;
 }
 
-/* Formas decorativas fluidas */
+
+/* Shapes animadas de fondo */
 .hero-shapes {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
     overflow: hidden;
-    clip-path: inset(0 0 0 0);
+    z-index: 0;
 }
 
 .shape {
     position: absolute;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    opacity: 1;
+    border-radius: 50%;
+    opacity: 0.25;
+    filter: blur(80px);
+    mix-blend-mode: screen;
 }
 
 .shape-1 {
-    width: 280px;
-    height: 280px;
-    background: linear-gradient(135deg, rgba(232, 180, 208, 0.6), rgba(210, 144, 183, 0.6));
-    top: 5%;
-    right: 8%;
-    animation: shapeZoomIn 0.8s ease-out 0.1s both, float 30s infinite ease-in-out 0.9s;
+    width: 400px;
+    height: 400px;
+    background: var(--color-secondary);
+    top: -100px;
+    right: -100px;
+    animation: floatShape 20s ease-in-out infinite;
 }
 
 .shape-2 {
-    width: 250px;
-    height: 250px;
-    background: linear-gradient(135deg, rgba(245, 213, 200, 0.6), rgba(232, 191, 168, 0.6));
-    bottom: 12%;
-    right: 20%;
-    border-radius: 50% 50% 50% 50%;
-    animation: shapeZoomIn 0.8s ease-out 0.3s both, float 30s infinite ease-in-out 1.1s;
+    width: 300px;
+    height: 300px;
+    background: var(--color-primary);
+    bottom: -50px;
+    left: -50px;
+    animation: floatShape 25s ease-in-out infinite 2s;
 }
 
 .shape-3 {
-    width: 220px;
-    height: 220px;
-    background: linear-gradient(135deg, rgba(212, 165, 212, 0.6), rgba(201, 155, 196, 0.6));
-    top: 45%;
-    right: 35%;
-    animation: shapeZoomIn 0.8s ease-out 0.5s both, float 30s infinite ease-in-out 1.3s;
+    width: 350px;
+    height: 350px;
+    background: var(--color-accent);
+    top: 50%;
+    left: 20%;
+    animation: floatShape 22s ease-in-out infinite 4s;
 }
 
 .shape-4 {
-    width: 150px;
-    height: 350px;
-    background: linear-gradient(135deg, rgba(242, 201, 160, 0.6), rgba(230, 184, 138, 0.6));
-    top: 8%;
-    right: 28%;
-    border-radius: 40% 60% 60% 40% / 70% 70% 30% 30%;
-    animation: shapeZoomIn 0.8s ease-out 0.2s both, float 30s infinite ease-in-out 1s;
+    width: 280px;
+    height: 280px;
+    background: var(--color-secondary);
+    top: 20%;
+    right: 15%;
+    animation: floatShape 18s ease-in-out infinite 1s;
 }
 
 .shape-5 {
-    width: 260px;
-    height: 260px;
-    background: linear-gradient(135deg, rgba(229, 197, 232, 0.6), rgba(212, 174, 216, 0.6));
-    top: 25%;
-    left: 8%;
-    border-radius: 50% 50% 50% 50%;
-    animation: shapeZoomIn 0.8s ease-out 0.4s both, float 30s infinite ease-in-out 1.2s;
+    width: 320px;
+    height: 320px;
+    background: var(--color-primary);
+    bottom: 10%;
+    right: 5%;
+    animation: floatShape 24s ease-in-out infinite 3s;
 }
 
-.shape-6 {
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(135deg, rgba(240, 208, 226, 0.6), rgba(227, 187, 211, 0.6));
-    bottom: 20%;
-    left: 18%;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    animation: shapeZoomIn 0.8s ease-out 0.6s both, float 30s infinite ease-in-out 1.4s;
-}
-
-/* Puntos decorativos */
-.dots {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    background-image: radial-gradient(circle, rgba(218, 73, 141, 0.4) 2px, transparent 2px);
-    background-size: 15px 15px;
-}
-
-.dots-1 {
-    top: 18%;
-    right: 45%;
-    animation: shapeZoomIn 0.8s ease-out 0.7s both, float 28s infinite ease-in-out 1.5s;
-}
-
-.dots-2 {
-    bottom: 25%;
-    right: 10%;
-    animation: shapeZoomIn 0.8s ease-out 0.9s both, float 28s infinite ease-in-out 1.7s;
-}
-
-.dots-3 {
-    top: 65%;
-    right: 55%;
-    animation: shapeZoomIn 0.8s ease-out 0.5s both, float 28s infinite ease-in-out 1.3s;
-}
-
-.dots-4 {
-    top: 55%;
-    left: 12%;
-    animation: shapeZoomIn 0.8s ease-out 0.8s both, float 28s infinite ease-in-out 1.6s;
-}
-
-/* Triángulos decorativos */
-.triangle {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    opacity: 0.25;
-}
-
-.triangle-1 {
-    border-width: 0 30px 52px 30px;
-    border-color: transparent transparent rgba(105, 36, 124, 0.5) transparent;
-    top: 38%;
-    right: 15%;
-    animation: shapeZoomIn 0.8s ease-out 0.3s both, float 32s infinite ease-in-out 1.1s;
-}
-
-.triangle-2 {
-    border-width: 0 25px 43px 25px;
-    border-color: transparent transparent rgba(218, 73, 141, 0.45) transparent;
-    bottom: 40%;
-    right: 48%;
-    animation: shapeZoomIn 0.8s ease-out 0.5s both, float 32s infinite ease-in-out 1.3s;
-}
-
-.triangle-3 {
-    border-width: 0 20px 35px 20px;
-    border-color: transparent transparent rgba(250, 198, 122, 0.5) transparent;
-    top: 28%;
-    right: 60%;
-    animation: shapeZoomIn 0.8s ease-out 0.7s both, float 32s infinite ease-in-out 1.5s;
-}
-
-.triangle-4 {
-    border-width: 0 28px 48px 28px;
-    border-color: transparent transparent rgba(105, 36, 124, 0.45) transparent;
-    top: 18%;
-    left: 22%;
-    animation: shapeZoomIn 0.8s ease-out 0.9s both, float 32s infinite ease-in-out 1.7s;
-}
-
-.triangle-5 {
-    border-width: 0 22px 38px 22px;
-    border-color: transparent transparent rgba(218, 73, 141, 0.5) transparent;
-    bottom: 35%;
-    left: 10%;
-    animation: shapeZoomIn 0.8s ease-out 1s both, float 32s infinite ease-in-out 1.8s;
+@keyframes floatShape {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-30px, -30px);
+    }
 }
 
 /* Contenedor del hero */
@@ -215,6 +133,7 @@
     position: relative;
     z-index: 2;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 
 /* Contenido del hero */
@@ -226,6 +145,13 @@
     padding-left: 32px;
     padding-right: 16px;
     min-width: 300px;
+}
+
+/* Contenido del hero centrado */
+.hero-content-centered {
+    text-align: center;
+    max-width: 700px;
+    padding: 0 32px;
 }
 
 .hero-subtitle {
@@ -266,6 +192,8 @@
     flex-wrap: wrap;
     animation: fadeInUp 1s ease 0.6s;
     animation-fill-mode: both;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-buttons .btn-primary {
@@ -278,34 +206,3 @@
     animation-fill-mode: both;
 }
 
-/* Área visual decorativa */
-.hero-visual {
-    position: relative;
-    height: 280px;
-    width: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 1;
-}
-
-.hero-decoration {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-
-.hero-icon {
-    width: 90%;
-    max-width: 200px;
-    height: auto;
-    filter: drop-shadow(0 10px 30px rgba(218, 73, 141, 0.2));
-    position: relative;
-    z-index: 2;
-}

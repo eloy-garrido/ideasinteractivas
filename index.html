@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/nova.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
@@ -22,7 +23,7 @@
                     <li><a href="#hero">Inicio</a></li>
                     <li><a href="#nosotros">Sobre Nosotros</a></li>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#trayectoria">Trayectoria</a></li>
+                    <li><a href="#nova">Nova</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
@@ -165,68 +166,93 @@
             </div>
         </div>
         <div class="servicios-wave-divider">
-            <svg viewBox="0 0 1440 120" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(238, 197, 185, 1)" offset="0%"></stop><stop stop-color="rgba(238, 197, 185, 1)" offset="100%"></stop></linearGradient></defs><path fill="url(#sw-gradient-0)" d="M0,72L13.3,78C26.7,84,53,96,80,90C106.7,84,133,60,160,52C186.7,44,213,52,240,50C266.7,48,293,36,320,26C346.7,16,373,8,400,8C426.7,8,453,16,480,30C506.7,44,533,64,560,72C586.7,80,613,76,640,66C666.7,56,693,40,720,40C746.7,40,773,56,800,68C826.7,80,853,88,880,88C906.7,88,933,80,960,76C986.7,72,1013,72,1040,64C1066.7,56,1093,40,1120,44C1146.7,48,1173,72,1200,82C1226.7,92,1253,88,1280,72C1306.7,56,1333,28,1360,22C1386.7,16,1413,32,1440,40C1466.7,48,1493,48,1520,44C1546.7,40,1573,32,1600,24C1626.7,16,1653,8,1680,4C1706.7,0,1733,0,1760,8C1786.7,16,1813,32,1840,34C1866.7,36,1893,24,1907,18L1920,12L1920,120L1906.7,120C1893.3,120,1867,120,1840,120C1813.3,120,1787,120,1760,120C1733.3,120,1707,120,1680,120C1653.3,120,1627,120,1600,120C1573.3,120,1547,120,1520,120C1493.3,120,1467,120,1440,120C1413.3,120,1387,120,1360,120C1333.3,120,1307,120,1280,120C1253.3,120,1227,120,1200,120C1173.3,120,1147,120,1120,120C1093.3,120,1067,120,1040,120C1013.3,120,987,120,960,120C933.3,120,907,120,880,120C853.3,120,827,120,800,120C773.3,120,747,120,720,120C693.3,120,667,120,640,120C613.3,120,587,120,560,120C533.3,120,507,120,480,120C453.3,120,427,120,400,120C373.3,120,347,120,320,120C293.3,120,267,120,240,120C213.3,120,187,120,160,120C133.3,120,107,120,80,120C53.3,120,27,120,13,120L0,120Z"></path></svg>
+           <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 110" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop><stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,66L60,55C120,44,240,22,360,16.5C480,11,600,22,720,29.3C840,37,960,40,1080,44C1200,48,1320,51,1440,49.5C1560,48,1680,40,1800,47.7C1920,55,2040,77,2160,77C2280,77,2400,55,2520,40.3C2640,26,2760,18,2880,16.5C3000,15,3120,18,3240,31.2C3360,44,3480,66,3600,77C3720,88,3840,88,3960,73.3C4080,59,4200,29,4320,29.3C4440,29,4560,59,4680,73.3C4800,88,4920,88,5040,75.2C5160,62,5280,37,5400,27.5C5520,18,5640,26,5760,40.3C5880,55,6000,77,6120,78.8C6240,81,6360,62,6480,51.3C6600,40,6720,37,6840,29.3C6960,22,7080,11,7200,18.3C7320,26,7440,51,7560,62.3C7680,73,7800,70,7920,60.5C8040,51,8160,37,8280,34.8C8400,33,8520,44,8580,49.5L8640,55L8640,110L8580,110C8520,110,8400,110,8280,110C8160,110,8040,110,7920,110C7800,110,7680,110,7560,110C7440,110,7320,110,7200,110C7080,110,6960,110,6840,110C6720,110,6600,110,6480,110C6360,110,6240,110,6120,110C6000,110,5880,110,5760,110C5640,110,5520,110,5400,110C5280,110,5160,110,5040,110C4920,110,4800,110,4680,110C4560,110,4440,110,4320,110C4200,110,4080,110,3960,110C3840,110,3720,110,3600,110C3480,110,3360,110,3240,110C3120,110,3000,110,2880,110C2760,110,2640,110,2520,110C2400,110,2280,110,2160,110C2040,110,1920,110,1800,110C1680,110,1560,110,1440,110C1320,110,1200,110,1080,110C960,110,840,110,720,110C600,110,480,110,360,110C240,110,120,110,60,110L0,110Z"></path></svg>
         </div>
     </section>
 
-    
+    <section id="nova">
+        <div class="container nova-container">
+            <h2 class="section-title">Conoce a Nova</h2>
+            <p class="nova-intro">Tu mascota virtual inteligente diseñada para revolucionar el aprendizaje en Moodle</p>
 
-    <section id="trayectoria">
-        <div class="container">
-            <h2 class="section-title">Nuestra Trayectoria</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p><strong>Ideas Interactivas</strong> es una empresa pionera en la transformación digital educativa, especializada en combinar tecnología de punta con metodologías pedagógicas efectivas. Nuestro equipo multidisciplinario está comprometido con impulsar la innovación en el ámbito educativo.</p>
-                    <p>Hemos liderado la implementación de soluciones educativas disruptivas, integrando <strong>e-learning avanzado</strong>, sistemas <strong>gamificados</strong>, y tecnologías de <strong>Inteligencia Artificial</strong> para optimizar y automatizar procesos educativos. Nos enfocamos en capacitar educadores y profesionales con las herramientas tecnológicas más relevantes del siglo XXI.</p>
+            <div class="nova-content">
+                <!-- Tarjeta de mascota -->
+                <div class="nova-mascot-section">
+                    <div class="igamified-wrapper">
+                        <div class="igamified-card">
+                            <div class="igamified-bonus-marker igamified-bonus-active">x2.0</div>
+                            <div class="igamified-card-body">
+                                <img src="igamified/lvl1-animated.gif" alt="Nova - Mascota Virtual" class="igamified-avatar">
+                                <div class="igamified-info">
+                                    <div class="igamified-spacer"></div>
+                                    <p class="igamified-text">
+                                        <span class="igamified-badge">Principiante</span>
+                                    </p>
+                                    <div class="igamified-progress-container">
+                                        <div class="igamified-progress">
+                                            <div class="igamified-progress-bar" style="width: 34%;"></div>
+                                            <div class="igamified-progress-text">34%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat card-interactive card-glass">
-                        <span class="stat-number text-accent">50+</span>
-                        <span class="stat-text">Plataformas e-Learning Implementadas</span>
-                    </div>
-                    <div class="stat card-interactive card-glass">
-                        <span class="stat-number text-accent">200+</span>
-                        <span class="stat-text">Profesionales Capacitados en Tecnología</span>
-                    </div>
-                    <div class="stat card-interactive card-glass">
-                        <span class="stat-number text-accent">30+</span>
-                        <span class="stat-text">Sistemas Gamificados Creados</span>
+
+                <!-- Descripción y características -->
+                <div class="nova-description-section">
+                    <h3 class="nova-title">¿Qué es Nova?</h3>
+                    <p class="nova-description">Nova es un acompañante virtual inteligente diseñado específicamente para plataformas Moodle de cualquier versión. Tu mascota crece y evoluciona con cada actividad que completas, motivándote a aprender día a día.</p>
+
+                    <div class="nova-features-grid">
+                        <div class="nova-feature">
+                            <i class="fas fa-star nova-feature-icon"></i>
+                            <h4 class="nova-feature-title">Crecimiento Progresivo</h4>
+                            <p class="nova-feature-text">Nova evoluciona con cada actividad que realizas, reflejando tu progreso académico de forma visual y motivadora.</p>
+                        </div>
+                        <div class="nova-feature">
+                            <i class="fas fa-gift nova-feature-icon"></i>
+                            <h4 class="nova-feature-title">Bonificaciones Diarias</h4>
+                            <p class="nova-feature-text">Completa actividades diariamente y desbloquea bonificaciones especiales que amplían tu aprendizaje.</p>
+                        </div>
+                        <div class="nova-feature">
+                            <i class="fas fa-sliders-h nova-feature-icon"></i>
+                            <h4 class="nova-feature-title">Totalmente Personalizable</h4>
+                            <p class="nova-feature-text">Control total para docentes. Configura Nova exactamente como necesitas para tu contexto educativo.</p>
+                        </div>
+                        <div class="nova-feature">
+                            <i class="fas fa-image nova-feature-icon"></i>
+                            <h4 class="nova-feature-title">Sprites Dinámicos</h4>
+                            <p class="nova-feature-text">Cambia el sprite por cualquier imagen estática o animada. Desde plantas hasta profesionales.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="trajectory-highlights">
-                <h3>Nuestras Especialidades</h3>
-                <div class="highlights-grid">
-                    <div class="highlight-card card-interactive card-glass">
-                        <i class="fas fa-graduation-cap icon-accent icon-lg"></i>
-                        <h4 class="heading-sm">Educación Digital</h4>
-                        <p class="text-small">Desarrollo e implementación de plataformas e-learning que transforman la experiencia educativa con contenidos interactivos y personalizados.</p>
+            <!-- Casos de uso -->
+            <div class="nova-usecases-section">
+                <h3 class="nova-usecases-title">Casos de Uso Creativos</h3>
+                <div class="nova-usecases-grid">
+                    <div class="nova-usecase-card">
+                        <i class="fas fa-leaf nova-usecase-icon"></i>
+                        <h4 class="nova-usecase-title">Curso de Agricultura</h4>
+                        <p class="nova-usecase-description">Transforma Nova en una planta que crece con cada actividad completada, mostrando el ciclo de vida del cultivo.</p>
                     </div>
-                    <div class="highlight-card card-interactive card-glass">
-                        <i class="fas fa-brain icon-accent icon-lg"></i>
-                        <h4 class="heading-sm">Inteligencia Artificial</h4>
-                        <p class="text-small">Soluciones con IA que automatizan procesos educativos, personalizan rutas de aprendizaje y facilitan la evaluación adaptativa.</p>
+                    <div class="nova-usecase-card">
+                        <i class="fas fa-code nova-usecase-icon"></i>
+                        <h4 class="nova-usecase-title">Curso de Tecnología</h4>
+                        <p class="nova-usecase-description">Nova evoluciona de principiante a profesional experto, reflejando el crecimiento técnico del estudiante.</p>
                     </div>
-                    <div class="highlight-card card-interactive card-glass">
-                        <i class="fas fa-gamepad icon-accent icon-lg"></i>
-                        <h4 class="heading-sm">Gamificación</h4>
-                        <p class="text-small">Creación de sistemas gamificados que aumentan el engagement y la motivación de estudiantes mediante mecánicas de juego innovadoras.</p>
+                    <div class="nova-usecase-card">
+                        <i class="fas fa-flask nova-usecase-icon"></i>
+                        <h4 class="nova-usecase-title">Laboratorios Científicos</h4>
+                        <p class="nova-usecase-description">Personaliza Nova como un experimento científico que evoluciona con cada actividad de laboratorio.</p>
                     </div>
-                    <div class="highlight-card card-interactive card-glass">
-                        <i class="fas fa-laptop icon-accent icon-lg"></i>
-                        <h4 class="heading-sm">Capacitación Tecnológica</h4>
-                        <p class="text-small">Programas de formación integral en tecnologías emergentes, metodologías ágiles y herramientas digitales para educadores y empresas.</p>
-                    </div>
-                    <div class="highlight-card card-interactive card-glass">
-                        <i class="fas fa-cogs icon-accent icon-lg"></i>
-                        <h4 class="heading-sm">Automatización de Procesos</h4>
-                        <p class="text-small">Implementación de sistemas automatizados que optimizan workflows administrativos y pedagógicos, reduciendo carga manual.</p>
-                    </div>
-                    <div class="highlight-card card-interactive card-glass">
-                        <i class="fas fa-chart-line icon-accent icon-lg"></i>
-                        <h4 class="heading-sm">Análisis y Evaluación</h4>
-                        <p class="text-small">Herramientas de análisis avanzadas que proporcionan insights sobre el desempeño y progreso educativo en tiempo real.</p>
+                    <div class="nova-usecase-card">
+                        <i class="fas fa-book nova-usecase-icon"></i>
+                        <h4 class="nova-usecase-title">Cursos Generales</h4>
+                        <p class="nova-usecase-description">Crea una mascota única que representa tu institución, personalizando completamente su comportamiento.</p>
                     </div>
                 </div>
             </div>
@@ -269,5 +295,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/nova.js"></script>
 </body>
 </html>

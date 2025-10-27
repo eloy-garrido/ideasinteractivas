@@ -1,0 +1,605 @@
+/* ========================================
+   SECCIÓN NOVA - MASCOTA VIRTUAL
+   Basado en igamified/nova.html
+   ======================================== */
+
+#nova {
+    padding: 120px 0;
+    position: relative;
+    overflow: visible;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1a3e 50%, #0f2847 100%);
+    background-image: url(../pix/fondo-nova.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: -120px;
+    z-index: 1;
+}
+
+.nova-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Encabezado de la sección */
+#nova .section-title {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(138, 43, 226, 0.3);
+}
+
+.nova-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #b0c4ff;
+    margin-bottom: 60px;
+    font-weight: 500;
+}
+
+/* Contenido principal */
+.nova-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+/* ========================================
+   TARJETA DE MASCOTA - DISEÑO IGAMIFIED
+   ======================================== */
+
+.nova-mascot-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.igamified-wrapper {
+    overflow: visible;
+    height: auto;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    border-radius: 30px;
+    margin: 0;
+    max-width: 400px;
+    width: 100%;
+}
+
+.igamified-card {
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.15);
+    border: 3px solid rgb(255, 255, 255);
+}
+
+.igamified-card-body {
+    padding: 30px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    padding-top: 150px;
+    background-image: linear-gradient(135deg, rgba(39, 90, 89, 0.95) 0%, rgba(74, 156, 155, 0.95) 100%);
+}
+
+.igamified-avatar {
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(4px 8px 8px rgba(0, 0, 0, 0.3));
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.igamified-info {
+    padding: 0;
+    text-align: center;
+}
+
+.igamified-spacer {
+    height: 1.2em;
+    margin-bottom: 5px;
+}
+
+.igamified-title {
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #434343;
+}
+
+.igamified-username {
+    margin: 0 0 5px 0;
+    font-size: 1em;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.igamified-text {
+    margin: 0 0 10px 0;
+}
+
+.igamified-badge {
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 1.05em;
+    background-color: #275a59;
+    color: #FFFFFF;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.igamified-progress-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.igamified-progress {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 18px;
+    height: 40px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.igamified-progress-bar {
+    background: linear-gradient(90deg, #306665 0%, #4A9C9B 50%, #62DAD8 100%);
+    height: 100%;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    box-shadow:
+        0 0 15px rgba(0, 137, 123, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+}
+
+.igamified-progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transform: skewX(-20deg);
+    animation: shine 3s ease-in-out infinite;
+}
+
+.igamified-progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    z-index: 2;
+    transition: all 0.3s ease;
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.8),
+        0 0 15px rgba(0, 137, 123, 0.6);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-200%) skewX(-20deg);
+    }
+    100% {
+        transform: translateX(300%) skewX(-20deg);
+    }
+}
+
+.igamified-bonus-marker {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1em;
+    z-index: 10;
+}
+
+.igamified-bonus-active {
+    background-color: #28a745;
+    color: white;
+    z-index: 1;
+}
+
+.igamified-bonus-inactive {
+    background-color: #6c757d;
+    color: white;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.igamified-card-body[style*="background-image"] {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.igamified-card-body[style*="background-color"] {
+    background-color: transparent;
+}
+
+/* ========================================
+   SECCIÓN DE DESCRIPCIÓN Y CARACTERÍSTICAS
+   ======================================== */
+
+.nova-description-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nova-description-section h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-shadow: 0 2px 8px rgba(138, 43, 226, 0.3);
+}
+
+.nova-description-section > p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #d0deff;
+    margin-bottom: 25px;
+}
+
+/* Grid de características */
+.nova-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.nova-feature {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.nova-feature:hover {
+    border-color: rgba(138, 43, 226, 0.4);
+    background: rgba(138, 43, 226, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(138, 43, 226, 0.25);
+}
+
+.nova-feature-icon {
+    font-size: 1.8rem;
+    color: #9d4edd;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.nova-feature-title {
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.nova-feature-text {
+    font-size: 0.9rem;
+    color: #c0d0ff;
+    line-height: 1.5;
+}
+
+/* ========================================
+   SECCIÓN DE CASOS DE USO
+   ======================================== */
+
+.nova-usecases-section {
+    margin-top: 80px;
+}
+
+.nova-usecases-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 50px;
+    font-weight: 600;
+    text-shadow: 0 2px 8px rgba(138, 43, 226, 0.3);
+}
+
+.nova-usecases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.nova-usecase-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 30px 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.nova-usecase-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(0, 255, 200, 0.4);
+    background: rgba(0, 255, 200, 0.08);
+    box-shadow: 0 15px 40px rgba(0, 255, 200, 0.2);
+}
+
+.nova-usecase-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+    color: #00ffc8;
+    transition: transform 0.3s ease;
+}
+
+.nova-usecase-card:hover .nova-usecase-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.nova-usecase-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.nova-usecase-description {
+    font-size: 0.95rem;
+    color: #c0d0ff;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   RESPONSIVE - DESKTOP (1366x1024)
+   ======================================== */
+
+@media (min-width: 1365px) {
+    #nova {
+        margin-top: -100px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - IPAD AIR (1180x820)
+   ======================================== */
+
+@media (max-width: 1200px) and (min-width: 1025px) {
+    #nova {
+        margin-top: -80px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+   ======================================== */
+
+@media (max-width: 1024px) {
+    #nova {
+        margin-top: -60px;
+        padding-top: 100px;
+    }
+
+    .nova-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .nova-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .igamified-wrapper {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .nova-usecases-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+    #nova {
+        margin-top: -50px;
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+
+    .nova-wave-divider svg {
+        min-height: 80px;
+    }
+
+    .nova-content {
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    #nova .section-title {
+        margin-bottom: 10px;
+    }
+
+    .nova-intro {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+
+    .igamified-wrapper {
+        padding-top: 60px;
+        padding-bottom: 30px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .igamified-avatar {
+        width: 180px;
+        height: 180px;
+        top: -60px;
+    }
+
+    .igamified-card-body {
+        padding: 20px;
+        padding-top: 120px;
+    }
+
+    .nova-description-section h3 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+
+    .nova-description-section > p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    .nova-features-grid {
+        gap: 12px;
+    }
+
+    .nova-feature {
+        padding: 15px;
+    }
+
+    .nova-feature-icon {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+
+    .nova-feature-title {
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+    }
+
+    .nova-feature-text {
+        font-size: 0.8rem;
+    }
+
+    .nova-usecases-section {
+        margin-top: 50px;
+    }
+
+    .nova-usecases-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .nova-usecases-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .nova-usecase-card {
+        padding: 20px 18px;
+    }
+
+    .nova-usecase-icon {
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+
+    .nova-usecase-title {
+        font-size: 1.1rem;
+    }
+
+    .nova-usecase-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #nova {
+        padding: 30px 0;
+    }
+
+    #nova .section-title {
+        font-size: 1.5rem;
+    }
+
+    .nova-intro {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+
+    .igamified-wrapper {
+        padding-top: 50px;
+        padding-bottom: 25px;
+        max-width: 320px;
+    }
+
+    .igamified-avatar {
+        width: 150px;
+        height: 150px;
+        top: -50px;
+    }
+
+    .igamified-card-body {
+        padding: 15px;
+        padding-top: 100px;
+    }
+
+    .igamified-progress {
+        height: 32px;
+    }
+
+    .igamified-progress-text {
+        font-size: 0.95em;
+    }
+
+    .nova-description-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .nova-description-section > p {
+        font-size: 0.9rem;
+    }
+
+    .nova-usecase-card {
+        padding: 18px 15px;
+    }
+
+    .nova-usecase-icon {
+        font-size: 1.8rem;
+    }
+}

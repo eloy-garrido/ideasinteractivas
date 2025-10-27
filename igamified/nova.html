@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iGamified - Bloque de Perfil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Estilos para el bloque IGamified */
+
+        /* Sobrescribir el padding del contenedor del bloque */
+        .block_igamified .content,
+        .block_igamified .card-body,
+        .block_igamified .card-text {
+            padding: 0.5rem !important;
+        }
+
+        /* Asegurar que el contenido del bloque no tenga padding extra */
+        .block_igamified .card-body > .card-text {
+            padding: 0 !important;
+        }
+
+        /* Eliminar border y box-shadow del bloque IGamified */
+        .block_igamified,
+        .block_igamified.card,
+        .block_igamified.block,
+        .blockstyle-classic #block-region-content .block_igamified,
+        .blockstyle-classic #block-region-content .block_igamified.card,
+        .blockstyle-minimal #block-region-content .block_igamified,
+        .blockstyle-minimal #block-region-content .block_igamified.card,
+        .style-default .block_igamified,
+        .style-default .block_igamified.card,
+        .style-minimal .block_igamified,
+        .style-minimal .block_igamified.card {
+            border: none !important;
+            box-shadow: none !important;
+            background-color: transparent !important;
+        }
+
+        /* Eliminar border y box-shadow de regiones específicas */
+        #block-region-content .block_igamified,
+        #block-region-content .block_igamified.card,
+        #block-region-side-pre .block_igamified,
+        #block-region-side-pre .block_igamified.card,
+        aside[data-blockregion="side-pre"] .block_igamified,
+        aside[data-blockregion="side-pre"] .block_igamified.card {
+            border: none !important;
+            box-shadow: none !important;
+            background-color: transparent !important;
+        }
+
+        .igamified-wrapper {
+            overflow: visible;
+            height: auto;
+            position: relative;
+            padding-top: 50px;
+            padding-bottom: 30px;
+            border-radius: 20px;
+            margin: 0;
+        }
+
+        .igamified-card {
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.15);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .igamified-card-body {
+            padding: 15px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            border-radius: 18px;
+            padding-top: 100px;
+            background-image: linear-gradient(135deg, rgba(39, 90, 89, 0.95) 0%, rgba(74, 156, 155, 0.95) 100%);
+        }
+
+        .igamified-avatar {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.5));
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .igamified-info {
+            padding: 0;
+            text-align: center;
+        }
+
+        .igamified-spacer {
+            height: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .igamified-title {
+            margin: 0 0 5px 0;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #434343;
+        }
+
+        .igamified-username {
+            margin: 0 0 5px 0;
+            font-size: 1em;
+            font-weight: 600;
+            color: #ffffff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .igamified-text {
+            margin: 0 0 10px 0;
+        }
+
+        .igamified-badge {
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            background-color: #275a59;
+            color: #FFFFFF;
+            display: inline-block;
+        }
+
+        .igamified-progress-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .igamified-progress {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            height: 24px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .igamified-progress-bar {
+            background: linear-gradient(90deg, #306665 0%, #4A9C9B 50%, #62DAD8 100%);
+            height: 100%;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            box-shadow:
+                0 0 15px rgba(0, 137, 123, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+        }
+
+        .igamified-progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            transform: skewX(-20deg);
+            animation: shine 3s ease-in-out infinite;
+        }
+
+        .igamified-progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 0.85em;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            z-index: 2;
+            transition: all 0.3s ease;
+            text-shadow:
+                0 1px 3px rgba(0, 0, 0, 0.8),
+                0 0 10px rgba(0, 137, 123, 0.5);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            backface-visibility: hidden;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-200%) skewX(-20deg);
+            }
+            100% {
+                transform: translateX(300%) skewX(-20deg);
+            }
+        }
+
+        .igamified-bonus-marker {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+            z-index: 10;
+        }
+
+        .igamified-bonus-active {
+            background-color: #28a745;
+            color: white;
+            z-index: 1;
+        }
+
+        .igamified-bonus-inactive {
+            background-color: #6c757d;
+            color: white;
+            opacity: 0.7;
+            z-index: 1;
+        }
+
+        .igamified-card-body[style*="background-image"] {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .igamified-card-body[style*="background-color"] {
+            background-color: transparent;
+        }
+
+        /* Estilos específicos para columnas laterales */
+        #block-region-side-pre .block_igamified .igamified-wrapper,
+        #block-region-side-pre .block_igamified .igamified-card,
+        aside[data-blockregion="side-pre"] .block_igamified .igamified-wrapper,
+        aside[data-blockregion="side-pre"] .block_igamified .igamified-card {
+            width: 100%;
+        }
+
+        #block-region-side-pre .block_igamified .igamified-avatar,
+        aside[data-blockregion="side-pre"] .block_igamified .igamified-avatar {
+            width: 150px !important;
+            height: 150px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+        }
+
+        #block-region-side-pre .block_igamified .igamified-info,
+        aside[data-blockregion="side-pre"] .block_igamified .igamified-info {
+            padding: 0 !important;
+            text-align: center !important;
+            margin-left: 0 !important;
+        }
+
+        #block-region-side-pre .block_igamified .igamified-card-body,
+        aside[data-blockregion="side-pre"] .block_igamified .igamified-card-body {
+            padding-top: 100px !important;
+        }
+
+        /* Sobrescribir estilos específicos de Moodle para el bloque IGamified */
+        .blockstyle-classic .block_igamified .content:not(.activityiconcontainer),
+        .blockstyle-classic .block_igamified>.card-body>.card-text,
+        .blockstyle-minimal .block_igamified .content:not(.activityiconcontainer),
+        .blockstyle-minimal .block_igamified>.card-body>.card-text,
+        .block_igamified.style-default .content:not(.activityiconcontainer),
+        .block_igamified.style-default>.card-body>.card-text,
+        .block_igamified.style-minimal .content:not(.activityiconcontainer),
+        .block_igamified.style-minimal>.card-body>.card-text {
+            padding: 0.5rem !important;
+        }
+
+        /* Asegurar que el wrapper tenga el espacio correcto */
+        .block_igamified .content .igamified-wrapper {
+            margin: -0.5rem;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="igamified-wrapper">
+            <div class="igamified-card">
+                <div class="igamified-bonus-marker igamified-bonus-active">X2.0</div>
+                <div class="igamified-card-body">
+                    <img src="lvl1-animated.gif" alt="Avatar" class="igamified-avatar">
+                    <div class="igamified-info">
+                        <div class="igamified-spacer"></div>
+                        <p class="igamified-text">
+                            <span class="igamified-badge">Principiante</span>
+                        </p>
+                        <div class="igamified-progress-container">
+                            <div class="igamified-progress">
+                                <div class="igamified-progress-bar" style="width: 34%;"></div>
+                                <div class="igamified-progress-text">34%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

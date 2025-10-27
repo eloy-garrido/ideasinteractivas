@@ -163,7 +163,6 @@
     }
 
     /* Secciones */
-    .about-content,
     .contact-container,
     .about-intro-content {
         flex-direction: column;
@@ -182,11 +181,6 @@
     .services-intro {
         font-size: 1rem;
         margin-bottom: 30px;
-    }
-
-    /* Estadísticas */
-    .about-stats {
-        justify-content: center;
     }
 
     .stat {

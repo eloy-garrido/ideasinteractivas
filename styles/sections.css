@@ -253,69 +253,6 @@
     margin-bottom: -1px;
 }
 
-
-
-
-.about-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-lg);
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
-
-.about-text {
-    flex: 1;
-    min-width: 300px;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    padding: 35px;
-    border-radius: var(--radius-md);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-    position: relative;
-    overflow: hidden;
-}
-
-.about-text::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(180deg, #B8437A 0%, #D94BA5 100%);
-}
-
-.about-text p {
-    margin-bottom: 18px;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: #555;
-    position: relative;
-    z-index: 1;
-}
-
-.about-text p:last-child {
-    margin-bottom: 0;
-}
-
-.about-text strong {
-    color: #281F32;
-    font-weight: 600;
-}
-
-.about-stats {
-    flex: 1;
-    min-width: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
-    justify-content: space-around;
-}
-
 /* Sección Contacto */
 #contacto {
     padding: var(--spacing-xl) 0;
@@ -355,60 +292,6 @@
     margin-right: 15px;
     width: 30px;
     text-align: center;
-}
-
-/* Especialidades - Trayectoria */
-.trajectory-highlights {
-    margin-top: 60px;
-    z-index: 1;
-    position: relative;
-}
-
-.trajectory-highlights h3 {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #281F32;
-    margin-bottom: 40px;
-    font-weight: 600;
-}
-
-.highlights-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-lg);
-}
-
-.highlight-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: var(--radius-md);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-}
-
-.highlight-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.9);
-}
-
-.highlight-card i {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-.highlight-card h4 {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-    font-weight: 600;
-}
-
-.highlight-card p {
-    font-size: 0.95rem;
 }
 
 /* Sección CTA Nova */

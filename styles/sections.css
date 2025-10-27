@@ -147,6 +147,11 @@
     padding: 0;
     background-color: #FFFFFF;
     position: relative;
+    background-image:
+        linear-gradient(to bottom, #FFFFFF 0%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0) 30%, #FFFFFF 100%),
+        url('../pix/texture-puntos.svg');
+    background-repeat: no-repeat, repeat;
+    background-position: 0 0, top right;
 }
 
 #servicios .container {

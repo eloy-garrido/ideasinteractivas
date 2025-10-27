@@ -4,7 +4,7 @@
 
 /* Sección Sobre Nosotros */
 #nosotros {
-    padding: var(--spacing-xl) 0;
+    padding-bottom: 70px;
     position: relative;
     background: #FBECC1;
 }
@@ -43,22 +43,26 @@
 }
 
 .highlight-box {
-    background: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(249, 230, 207, 0.6) 100%);
     padding: 25px;
     border-left: 4px solid #B8437A;
     text-align: left;
     transition: all 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(184, 67, 122, 0.1);
 }
 
 .highlight-box:hover {
-    transform: translateX(5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    background: rgba(255, 255, 255, 0.95);
+    transform: translateX(8px) translateY(-4px);
+    box-shadow: 0 12px 30px rgba(218, 73, 141, 0.25);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(249, 230, 207, 0.8) 100%);
+    border-left-color: #DA498D;
 }
 
 .highlight-box i {
     font-size: 2rem;
     margin-bottom: 10px;
+    color: #69247C;
 }
 
 .highlight-box h4 {
@@ -90,20 +94,29 @@
 }
 
 .approach-card {
-    background: rgba(255, 255, 255, 0.7);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(249, 230, 207, 0.4) 100%);
     padding: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     position: relative;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(105, 36, 124, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .approach-card:hover {
-    background: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(249, 230, 207, 0.6) 100%);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(218, 73, 141, 0.2);
 }
 
 .approach-number {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #B8437A 0%, #D94BA5 100%);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #69247C 0%, #DA498D 100%);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -112,6 +125,7 @@
     font-size: 1.8rem;
     font-weight: 700;
     margin: 0 auto 20px;
+    box-shadow: 0 4px 15px rgba(218, 73, 141, 0.3);
 }
 
 .approach-card h4 {
@@ -390,6 +404,98 @@
 
 .highlight-card p {
     font-size: 0.95rem;
+}
+
+/* Sección CTA Nova */
+#nova-cta {
+    background: linear-gradient(135deg, #69247C 0%, #DA498D 100%);
+    padding: var(--spacing-xl) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#nova-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.nova-cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+.nova-cta-text h2 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.nova-cta-text p {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.btn-cta {
+    background: white;
+    color: #69247C;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    background: #f9f9f9;
+}
+
+.btn-cta i {
+    font-size: 1.1rem;
+}
+
+/* Responsive para nova-cta */
+@media (max-width: 768px) {
+    .nova-cta-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nova-cta-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .nova-cta-text p {
+        font-size: 0.95rem;
+    }
+
+    .btn-cta {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* Footer */

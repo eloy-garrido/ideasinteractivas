@@ -135,15 +135,47 @@
     }
 
     .highlight-box {
-        padding: 20px;
+        padding: 30px 25px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.85);
+        border-left: none;
+        border-radius: 12px;
+        border-top: 4px solid #B8437A;
     }
 
     .highlight-box i {
-        font-size: 1.5rem;
+        font-size: 2.2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 18px;
+        background: linear-gradient(135deg, #B8437A 0%, #D94BA5 100%);
+        border-radius: 50%;
+        color: white;
     }
 
     .highlight-box h4 {
-        font-size: 1.05rem;
+        font-size: 1.15rem;
+        margin-bottom: 10px;
+        color: #281F32;
+    }
+
+    .highlight-box p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #666;
+    }
+
+    .highlight-box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(184, 67, 122, 0.15);
+        background: rgba(255, 255, 255, 0.95);
+        border-top-color: #D94BA5;
     }
 
     .approach-grid {

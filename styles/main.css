@@ -1,15 +1,63 @@
 /* ========================================
    ARCHIVO PRINCIPAL DE ESTILOS
    Ideas Interactivas - Educación y Tecnología
+
+   Este archivo importa todos los módulos CSS del proyecto
+   en orden de especificidad y cascada.
    ======================================== */
 
-/* Importar módulos en orden de especificidad */
+/* ========================================
+   1. FUNDAMENTOS
+   Definen las variables y estilos base del sitio
+   ======================================== */
+
+/* Variables CSS globales (colores, espaciado, tipografía, etc.) */
 @import url('variables.css');
+
+/* Estilos base para elementos HTML (body, html, * reset, etc.) */
 @import url('base.css');
+
+/* Layout general (container, grid, flexbox base, etc.) */
 @import url('layout.css');
+
+/* ========================================
+   2. UTILIDADES REUTILIZABLES
+   Clases de utilidad para reducir CSS duplicado
+   ======================================== */
+
+/* Clases de utilidad: flexbox, spacing, text, cards, etc. */
+@import url('utilities.css');
+
+/* ========================================
+   3. COMPONENTES ESPECÍFICOS
+   Estilos para componentes reutilizables
+   ======================================== */
+
+/* Botones, tarjetas, estadísticas, íconos, redes sociales */
 @import url('components.css');
+
+/* Header y navegación */
 @import url('header.css');
+
+/* Sección hero con animaciones y contenido principal */
 @import url('hero.css');
+
+/* Secciones: Sobre Nosotros, Servicios, Trayectoria, Contacto */
 @import url('sections.css');
+
+/* ========================================
+   4. EFECTOS Y ANIMACIONES
+   Keyframes y animaciones globales
+   ======================================== */
+
+/* Keyframes de animaciones (fade, pulse, float, shimmer, etc.) */
 @import url('animations.css');
+
+/* ========================================
+   5. RESPONSIVE DESIGN
+   Breakpoints y estilos responsive por dispositivo
+   ======================================== */
+
+/* Mobile (≤480px), Tablet (600-991px), Desktop (992px+) */
+/* Importa múltiples archivos responsive modularizados */
 @import url('responsive.css');

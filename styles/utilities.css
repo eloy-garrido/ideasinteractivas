@@ -1,0 +1,456 @@
+/* ========================================
+   UTILITIES CSS
+   Clases reutilizables para reducir duplicación
+   ======================================== */
+
+/* ========================================
+   FLEXBOX UTILITIES
+   ======================================== */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========================================
+   GRID UTILITIES
+   ======================================== */
+.grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+/* ========================================
+   TEXT UTILITIES
+   ======================================== */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-small {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.text-dark {
+    color: #281F32;
+}
+
+.text-light-gray {
+    color: #666;
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-accent {
+    color: #B8437A;
+}
+
+/* ========================================
+   SPACING UTILITIES
+   ======================================== */
+.mb-xs { margin-bottom: var(--spacing-xs); }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+.mb-15 { margin-bottom: 15px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+
+.mt-xs { margin-top: var(--spacing-xs); }
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+
+.p-xs { padding: var(--spacing-xs); }
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+
+.p-30 { padding: 30px; }
+
+/* ========================================
+   BORDER & RADIUS UTILITIES
+   ======================================== */
+.rounded-md {
+    border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+    border-radius: var(--radius-lg);
+}
+
+.rounded-circle {
+    border-radius: 50%;
+}
+
+.border-white-light {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.border-white-glass {
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+/* ========================================
+   SHADOW UTILITIES
+   ======================================== */
+.shadow-sm {
+    box-shadow: var(--shadow-sm);
+}
+
+.shadow-md {
+    box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+    box-shadow: var(--shadow-lg);
+}
+
+.shadow-primary {
+    box-shadow: 0 4px 15px rgba(105, 36, 124, 0.3);
+}
+
+.shadow-secondary {
+    box-shadow: 0 4px 15px rgba(218, 73, 141, 0.15);
+}
+
+.shadow-soft {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-hover-lg {
+    box-shadow: 0 12px 40px rgba(31, 38, 135, 0.3);
+}
+
+/* ========================================
+   BACKGROUND UTILITIES
+   ======================================== */
+.bg-glass {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.bg-glass-dark {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(90deg, #B8437A 0%, #D94BA5 100%);
+}
+
+.bg-white {
+    background: white;
+}
+
+/* ========================================
+   BACKDROP FILTER UTILITIES
+   ========================================  */
+.backdrop-blur-md {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.backdrop-blur-lg {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+/* ========================================
+   GLASS MORPHISM CARD
+   ======================================== */
+.card-glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 30px;
+    text-align: center;
+}
+
+.card-glass-dark {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: var(--radius-md);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.card-interactive {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card-interactive:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   POSITION UTILITIES
+   ======================================== */
+.pos-relative {
+    position: relative;
+}
+
+.pos-absolute {
+    position: absolute;
+}
+
+.pos-fixed {
+    position: fixed;
+}
+
+.pos-absolute-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* ========================================
+   TRANSITION UTILITIES
+   ======================================== */
+.transition-fast {
+    transition: all var(--transition-fast);
+}
+
+.transition-normal {
+    transition: all var(--transition-normal);
+}
+
+.transition-smooth {
+    transition: all 0.3s ease;
+}
+
+.transition-opacity {
+    transition: opacity 0.4s ease;
+}
+
+/* ========================================
+   TRANSFORM UTILITIES
+   ======================================== */
+.transform-hover-up-2 {
+    transition: transform var(--transition-fast);
+}
+
+.transform-hover-up-2:hover {
+    transform: translateY(-2px);
+}
+
+.transform-hover-up-8 {
+    transition: transform var(--transition-fast);
+}
+
+.transform-hover-up-8:hover {
+    transform: translateY(-8px);
+}
+
+.transform-hover-up-10 {
+    transition: transform var(--transition-fast);
+}
+
+.transform-hover-up-10:hover {
+    transform: translateY(-10px);
+}
+
+.scale-hover {
+    transition: transform var(--transition-fast);
+}
+
+.scale-hover:hover {
+    transform: scale(1.05);
+}
+
+/* ========================================
+   DISPLAY UTILITIES
+   ======================================== */
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* ========================================
+   ICON UTILITIES
+   ======================================== */
+.icon-accent {
+    display: block;
+    color: #B8437A;
+}
+
+.icon-primary {
+    display: block;
+    color: var(--color-primary);
+}
+
+.icon-lg {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* ========================================
+   OPACITY UTILITIES
+   ======================================== */
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+.opacity-100 {
+    opacity: 1;
+}
+
+/* ========================================
+   SIZING UTILITIES
+   ======================================== */
+.w-100 {
+    width: 100%;
+}
+
+.max-w-100 {
+    max-width: 100%;
+}
+
+.h-auto {
+    height: auto;
+}
+
+.h-full {
+    height: 100%;
+}
+
+/* ========================================
+   ANIMATION UTILITIES
+   ======================================== */
+.animate-fade-in-down {
+    animation: fadeInDown 1s ease;
+    animation-fill-mode: both;
+}
+
+.animate-fade-in-down-delay-2 {
+    animation: fadeInDown 1s ease 0.2s;
+    animation-fill-mode: both;
+}
+
+.animate-fade-in-down-delay-4 {
+    animation: fadeInDown 1s ease 0.4s;
+    animation-fill-mode: both;
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse {
+    animation: buttonPulse 2s infinite;
+}
+
+/* ========================================
+   HEADING UTILITIES
+   ======================================== */
+.heading-primary {
+    color: #281F32;
+    margin-bottom: 15px;
+}
+
+.heading-sm {
+    color: #281F32;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    text-align: center;
+    color: #281F32;
+}
+
+/* ========================================
+   RESPONSIVE DISPLAY
+   ======================================== */
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   PRINT UTILITIES
+   ======================================== */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}

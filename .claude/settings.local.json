@@ -9,7 +9,8 @@
       "Bash(mv \"Recurso 13icono-blanco.png\" pix/hero-icon-white.png)",
       "Bash(mv icono-morado.png pix/icon-purple.png)",
       "Bash(mv diseño-hero.jpg pix/hero-design-reference.jpg)",
-      "Bash(mv script.js js/main.js)"
+      "Bash(mv script.js js/main.js)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

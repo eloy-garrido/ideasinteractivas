@@ -447,7 +447,9 @@
         padding-top: 80px;
         padding-bottom: 60px;
     }
-
+    .nova-container {
+        padding-top:  30px;
+    }
     .nova-wave-divider svg {
         min-height: 80px;
     }

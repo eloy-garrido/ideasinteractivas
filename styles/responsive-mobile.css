@@ -92,6 +92,10 @@
     }
 
     /* Service cards */
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+
     .service-card {
         padding: var(--spacing-sm);
     }

@@ -1,0 +1,140 @@
+/* ========================================
+   RESPONSIVE DESKTOP
+   Estilos para pantallas grandes y desktop
+   ======================================== */
+
+/* ========================================
+   TABLET HORIZONTAL / LAPTOP PEQUEÑO - 992px y mayores
+   ======================================== */
+@media (min-width: 992px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+    }
+
+    /* Ajustar hero en pantallas horizontales */
+    .hero-wrapper {
+        gap: 40px;
+        flex-wrap: nowrap;
+    }
+
+    .hero-visual {
+        width: 320px;
+        height: 320px;
+        flex-shrink: 0;
+    }
+
+    .hero-decoration {
+        max-width: 100%;
+    }
+
+    .hero-content {
+        padding-left: 28px;
+        padding-right: 16px;
+        flex: 1 1 auto;
+    }
+
+    .hero-icon {
+        max-width: 220px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .hero-buttons .btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+}
+
+/* ========================================
+   DESKTOP GRANDE - 1200px a 1599px
+   ======================================== */
+@media (min-width: 1200px) and (max-width: 1599px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Limitar tamaño del hero visual en pantallas grandes */
+    .hero-visual {
+        width: 360px;
+        height: 360px;
+        flex-shrink: 0;
+    }
+
+    .hero-decoration {
+        max-width: 100%;
+    }
+
+    .hero-icon {
+        max-width: 240px;
+    }
+
+    .hero-wrapper {
+        gap: 50px;
+    }
+
+    .hero-content {
+        padding-left: 32px;
+        padding-right: 20px;
+        flex: 1 1 auto;
+    }
+
+    .hero-title {
+        font-size: 3.8rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+/* ========================================
+   DESKTOP MUY GRANDE - 1600px y mayores
+   ======================================== */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1600px;
+    }
+
+    .hero-visual {
+        width: 400px;
+        height: 400px;
+        flex-shrink: 0;
+    }
+
+    .hero-decoration {
+        max-width: 100%;
+    }
+
+    .hero-icon {
+        max-width: 260px;
+    }
+
+    .hero-wrapper {
+        gap: 60px;
+    }
+
+    .hero-content {
+        padding-left: 40px;
+        padding-right: 24px;
+        flex: 1 1 auto;
+    }
+
+    .hero-title {
+        font-size: 4.2rem;
+    }
+
+    .section-title {
+        font-size: 3.2rem;
+    }
+}

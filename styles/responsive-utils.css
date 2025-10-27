@@ -1,0 +1,69 @@
+/* ========================================
+   RESPONSIVE UTILS
+   Optimizaciones y estilos especiales
+   ======================================== */
+
+/* ========================================
+   OPTIMIZACIONES DE PERFORMANCE
+   ======================================== */
+
+/* Reducir animaciones en dispositivos que prefieren movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Optimizar para pantallas táctiles */
+@media (hover: none) and (pointer: coarse) {
+    /* Aumentar áreas táctiles */
+    .btn,
+    nav ul li a,
+    .social-media a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Remover efectos hover en dispositivos táctiles */
+    .service-card:hover,
+    .stat:hover {
+        transform: none;
+    }
+}
+
+/* ========================================
+   IMPRESIÓN
+   ======================================== */
+@media print {
+    /* Ocultar elementos no necesarios para impresión */
+    header,
+    .menu-toggle,
+    .hero-shapes,
+    .hero-wave-divider,
+    .social-media,
+    footer {
+        display: none !important;
+    }
+
+    /* Optimizar para impresión */
+    body {
+        background: white;
+        color: black;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+    }
+
+    /* Evitar saltos de página en elementos importantes */
+    .service-card,
+    .stat,
+    .info-item {
+        page-break-inside: avoid;
+    }
+}

@@ -23,13 +23,18 @@
     text-align: center;
     z-index: 5;
     margin-bottom: 2rem;
+    animation: zoomIn 0.8s ease-out;
 }
 
 .mobile-logo img {
     height: 400px;
     width: auto;
     margin: 0 auto;
-    animation: float 4s ease-in-out infinite;
+}
+
+/* Animaciones WOW para el mobile-logo */
+.mobile-logo.wow.pulse.animated {
+    animation: zoomIn 0.8s ease-out, pulse 2s ease-in-out 0.8s infinite !important;
 }
 
 /* Wave divisoria al final del hero */

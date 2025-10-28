@@ -225,8 +225,60 @@ if (header) {
     });
 }
 
+// Detectar zoom del navegador y ajustar tamaños dinámicamente
+function detectZoomAndAdjustContent() {
+    // Función para obtener el nivel de zoom del navegador
+    function getZoomLevel() {
+        return window.devicePixelRatio || 1;
+    }
+
+    // Función para ajustar todos los elementos según el zoom
+    function adjustContentForZoom() {
+        const zoomLevel = getZoomLevel();
+
+        // Solo ajustar si el zoom es mayor a 1 (zoomed in)
+        if (zoomLevel > 1) {
+            // Calcular el factor de escala inverso más agresivo
+            // Si zoom es 1.25 (125%), queremos al 60% (1/1.25 - 0.2 adicional)
+            const scaleFactor = (1 / zoomLevel) * 0.75;
+
+            // Aplicar la solución a elementos críticos
+            const mobileLogoImg = document.querySelector('.mobile-logo img');
+
+            // Reducir tamaño SOLO del logo/icon
+            if (mobileLogoImg) {
+                mobileLogoImg.style.height = Math.max(150, 400 * scaleFactor) + 'px';
+            }
+        } else {
+            // Restablecer estilos si zoom es normal
+            const mobileLogoImg = document.querySelector('.mobile-logo img');
+
+            if (mobileLogoImg) {
+                mobileLogoImg.style.height = '400px';
+            }
+        }
+    }
+
+    // Ajustar al cargar
+    adjustContentForZoom();
+
+    // Escuchar cambios de resize (que incluye cambios de zoom en muchos navegadores)
+    window.addEventListener('resize', adjustContentForZoom);
+
+    // Verificar periódicamente cambios de zoom
+    let lastZoom = getZoomLevel();
+    setInterval(() => {
+        const currentZoom = getZoomLevel();
+        if (Math.abs(currentZoom - lastZoom) > 0.01) {
+            lastZoom = currentZoom;
+            adjustContentForZoom();
+        }
+    }, 300);
+}
+
 // Inicializar todas las animaciones cuando el DOM esté listo
 function initAllAnimations() {
+    detectZoomAndAdjustContent();
     initHeroContentAnimation();
     initServiceCardsAnimation();
 }

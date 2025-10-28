@@ -4,7 +4,12 @@
 
 #hero {
     height: 100vh;
-    background: linear-gradient(135deg, var(--color-light) 0%, #FFD4E5 25%, #FAC67A 50%, #F5D5A8 75%, var(--color-light) 100%);
+    background-image: linear-gradient(rgb(255 255 255 / 79%), rgba(255, 255, 255, 0.5)), 
+    url(../pix/fondo-hero.png), 
+    linear-gradient(135deg, var(--color-light) 0%, #FFD4E5 25%, #FAC67A 50%, #F5D5A8 75%, var(--color-light) 100%);
+    background-size: cover, cover;
+    background-position: top, center;
+    background-repeat: no-repeat, no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;

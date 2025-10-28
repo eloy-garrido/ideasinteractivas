@@ -296,9 +296,9 @@
 
 /* Sección CTA Nova */
 #nova-cta {
-    padding: 80px 0;
     position: relative;
     overflow: hidden;
+    margin-top: 80px;
 }
 
 /* Capa adicional de gradiente diagonal para más dinamismo */

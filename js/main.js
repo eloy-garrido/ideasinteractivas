@@ -85,6 +85,10 @@ if (document.readyState === 'loading') {
 
 // Animación de entrada del hero-content con Anime.js - profesional y suave
 function initHeroContentAnimation() {
+    // Evitar errores si Anime.js no está disponible
+    if (typeof window.anime === 'undefined') {
+        return;
+    }
     const heroTitle = document.querySelector('.hero-title');
     const heroDescription = document.querySelector('.hero-description');
     const heroButtons = document.querySelector('.hero-buttons');
@@ -157,6 +161,10 @@ function initHeroContentAnimation() {
 
 // Animación de hover en tarjetas de servicios
 function initServiceCardsAnimation() {
+    // Evitar errores si Anime.js no está disponible
+    if (typeof window.anime === 'undefined') {
+        return;
+    }
     const serviceCards = document.querySelectorAll('.service-card');
 
     serviceCards.forEach(card => {
@@ -225,6 +233,37 @@ if (header) {
     });
 }
 
+// Barra de progreso de lectura (actualiza el ancho según el scroll)
+function initReadingProgressBar() {
+    const progressBar = document.querySelector('[data-reading-progress]');
+
+    if (!progressBar) return;
+
+    function updateProgress() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        const docHeight = Math.max(
+            document.body.scrollHeight,
+            document.documentElement.scrollHeight,
+            document.body.offsetHeight,
+            document.documentElement.offsetHeight,
+            document.body.clientHeight,
+            document.documentElement.clientHeight
+        );
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        const scrollable = Math.max(docHeight - viewportHeight, 1);
+        const progress = Math.min(Math.max((scrollTop / scrollable) * 100, 0), 100);
+
+        progressBar.style.width = progress + '%';
+    }
+
+    // Actualizar en scroll y resize
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+
+    // Inicializar al cargar
+    updateProgress();
+}
+
 // Detectar zoom del navegador y ajustar tamaños dinámicamente
 function detectZoomAndAdjustContent() {
     // Función para obtener el nivel de zoom del navegador
@@ -278,6 +317,8 @@ function detectZoomAndAdjustContent() {
 
 // Inicializar todas las animaciones cuando el DOM esté listo
 function initAllAnimations() {
+    // Inicializar primero la barra de progreso (no depende de Anime.js)
+    initReadingProgressBar();
     detectZoomAndAdjustContent();
     initHeroContentAnimation();
     initServiceCardsAnimation();

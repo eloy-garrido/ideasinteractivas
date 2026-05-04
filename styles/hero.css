@@ -4,15 +4,12 @@
 
 #hero {
     height: 100vh;
-    background-image: linear-gradient(rgb(255 255 255 / 79%), rgba(255, 255, 255, 0.5)), 
-    url(../pix/fondo-hero.png), 
-    linear-gradient(135deg, var(--color-light) 0%, #FFD4E5 25%, #FAC67A 50%, #F5D5A8 75%, var(--color-light) 100%);
-    background-size: cover, cover;
-    background-position: top, center;
-    background-repeat: no-repeat, no-repeat;
+    background-image: url(../pix/fondo-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    justify-content: center;
     position: relative;
     overflow: hidden;
     padding: 0;
@@ -20,27 +17,30 @@
     box-sizing: border-box;
 }
 
-
-/* Logo móvil en la parte superior */
-.mobile-logo {
-    display: block;
-    width: 100%;
-    text-align: center;
-    z-index: 5;
-    margin-bottom: 2rem;
-    animation: zoomIn 0.8s ease-out;
+#hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.35) 55%, transparent 85%);
+    pointer-events: none;
 }
 
-.mobile-logo img {
-    height: 400px;
-    width: auto;
-    margin: 0 auto;
+#hero .container {
+    position: relative;
+    z-index: 2;
 }
 
-/* Animaciones WOW para el mobile-logo */
-.mobile-logo.wow.pulse.animated {
+
+/* Logo móvil en la parte superior - DESHABILITADO */
+/* .mobile-logo {
+    display: none;
+} */
+
+/* Animaciones WOW para el mobile-logo - DESHABILITADO */
+/* .mobile-logo.wow.pulse.animated {
     animation: zoomIn 0.8s ease-out, pulse 2s ease-in-out 0.8s infinite !important;
-}
+} */
 
 /* Wave divisoria al final del hero */
 .hero-wave-divider {
@@ -61,8 +61,8 @@
 }
 
 
-/* Shapes animadas de fondo */
-.hero-shapes {
+/* Shapes animadas de fondo - DESHABILITADO */
+/* .hero-shapes {
     position: absolute;
     top: 0;
     left: 0;
@@ -132,27 +132,25 @@
     50% {
         transform: translate(-30px, -30px);
     }
-}
+} */
 
 /* Contenedor del hero */
 .hero-wrapper {
     display: flex;
-    gap: 60px;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
     position: relative;
     z-index: 2;
-    flex-wrap: wrap;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
+    padding-left: 32px;
 }
 
 /* Contenido del hero */
 .hero-content {
     text-align: left;
     animation: fadeInRight 1s ease;
-    flex: 1 1 100%;
-    max-width: 550px;
-    padding-left: 32px;
+    max-width: 620px;
     padding-right: 16px;
     min-width: 300px;
 }
@@ -175,24 +173,58 @@
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    font-size: 5.5rem;
     font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 25px;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    margin-bottom: 28px;
     color: var(--color-primary);
+    text-wrap: balance;
     animation: fadeInDown 1s ease 0.2s;
     animation-fill-mode: both;
 }
 
 .hero-description {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 35px;
-    color: var(--color-text-light);
+    color: var(--color-text);
     max-width: 100%;
-    font-weight: 400;
+    font-weight: 500;
     animation: fadeInDown 1s ease 0.4s;
     animation-fill-mode: both;
+}
+
+.hero-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 38px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: fadeInDown 1s ease 0.4s;
+    animation-fill-mode: both;
+}
+
+.hero-bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1.08rem;
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.hero-bullets li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    margin-top: 7px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FF006E, #4361EE);
 }
 
 /* Botones del hero */
@@ -214,5 +246,81 @@
 .hero-buttons .btn-secondary {
     animation: fadeInUp 1s ease 0.7s;
     animation-fill-mode: both;
+}
+
+/* Pilares del hero */
+.hero-pillars {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    max-width: 760px;
+    background: rgba(10, 15, 45, 0.62);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+    animation: fadeInUp 1s ease 0.7s;
+    animation-fill-mode: both;
+}
+
+.hero-pillar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 22px;
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-pillar-divider {
+    width: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 12px 0;
+    flex-shrink: 0;
+}
+
+.hero-pillar-icon {
+    font-size: 2.2rem;
+    color: rgba(255, 255, 255, 0.92);
+    flex-shrink: 0;
+    width: 40px;
+    text-align: center;
+    line-height: 1;
+}
+
+.hero-pillar-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.hero-pillar-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+}
+
+.hero-pillar-desc {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-content,
+    .hero-subtitle,
+    .hero-title,
+    .hero-description,
+    .hero-pillars,
+    .hero-buttons,
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
 }
 

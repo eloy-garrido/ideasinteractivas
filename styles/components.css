@@ -12,7 +12,7 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: var(--transition-fast);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
     cursor: pointer;
 }
@@ -26,7 +26,7 @@
 
 /* Botón primario */
 .btn-primary {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    background: linear-gradient(135deg, #FF006E 0%, #4361EE 100%);
     color: var(--color-white);
     border: none;
     padding: 18px 42px;
@@ -34,7 +34,7 @@
     font-weight: 600;
     font-size: 0.9rem;
     letter-spacing: 0.5px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(105, 36, 124, 0.3);
@@ -72,8 +72,8 @@
     right: -2px;
     bottom: -2px;
     background: linear-gradient(135deg,
-        rgba(218, 73, 141, 0.7),
-        rgba(105, 36, 124, 0.7)
+        rgba(255, 0, 110, 0.7),
+        rgba(67, 97, 238, 0.7)
     );
     border-radius: 50px;
     opacity: 0;
@@ -92,11 +92,8 @@
 
 .btn-primary:hover {
     transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 12px 35px rgba(218, 73, 141, 0.6);
-    background: linear-gradient(135deg,
-        rgba(218, 73, 141, 1) 0%,
-        rgba(105, 36, 124, 1) 100%
-    );
+    box-shadow: 0 12px 35px rgba(255, 0, 110, 0.5);
+    background: linear-gradient(135deg, #FF2280 0%, #5573F0 100%);
 }
 
 .btn-primary:active {
@@ -106,15 +103,15 @@
 
 /* Botón secundario */
 .btn-secondary {
-    background-color: var(--color-white);
-    color: var(--color-secondary);
+    background-color: transparent;
+    color: var(--color-primary);
     padding: 18px 42px;
     border-radius: 50px;
     font-weight: 600;
     font-size: 0.9rem;
     letter-spacing: 0.5px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 2px solid var(--color-secondary);
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid var(--color-primary);
     position: relative;
     overflow: hidden;
     display: inline-flex;
@@ -122,7 +119,7 @@
     justify-content: center;
     line-height: 1;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(218, 73, 141, 0.15);
+    box-shadow: none;
 }
 
 .btn-secondary::after {
@@ -132,16 +129,16 @@
     top: 50%;
     transform: translateY(-50%) translateX(0);
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     font-size: 1.1rem;
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
     color: var(--color-white);
-    border-color: var(--color-secondary);
+    border-color: var(--color-primary);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(218, 73, 141, 0.3);
+    box-shadow: 0 6px 20px rgba(105, 36, 124, 0.25);
     padding-right: 60px;
 }
 

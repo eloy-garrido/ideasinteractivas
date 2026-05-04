@@ -1,28 +1,39 @@
 /* ========================================
-   RESPONSIVE DESKTOP
-   Estilos para pantallas grandes y desktop
-   ======================================== */
+    RESPONSIVE DESKTOP
+    Estilos para pantallas grandes y desktop
+    ======================================== */
 
 /* ========================================
-   TABLET HORIZONTAL / LAPTOP PEQUEÑO - 992px y mayores
-   ======================================== */
+    TABLET HORIZONTAL / LAPTOP PEQUEÑO - 992px y mayores
+    ======================================== */
 @media (min-width: 992px) {
     .container {
         max-width: 1400px;
     }
 
+    /* Hero alineado a la izquierda en PC */
+    .hero-wrapper {
+        padding-left: 40px;
+        gap: 28px;
+    }
+
+    .hero-content {
+        text-align: left;
+        padding-left: 0;
+        padding-right: 16px;
+        max-width: 680px;
+    }
+
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+
     .hero-title {
-        font-size: 3.5rem;
+        font-size: 4.8rem;
     }
 
     .section-title {
         font-size: 2.8rem;
-    }
-
-    /* Ajustar hero en pantallas horizontales */
-    .hero-wrapper {
-        gap: 40px;
-        flex-wrap: nowrap;
     }
 
     .hero-visual {
@@ -33,12 +44,6 @@
 
     .hero-decoration {
         max-width: 100%;
-    }
-
-    .hero-content {
-        padding-left: 28px;
-        padding-right: 16px;
-        flex: 1 1 auto;
     }
 
     .hero-icon {
@@ -90,7 +95,7 @@
     }
 
     .hero-title {
-        font-size: 3.8rem;
+        font-size: 5.5rem;
     }
 
     .section-title {
@@ -131,7 +136,7 @@
     }
 
     .hero-title {
-        font-size: 4.2rem;
+        font-size: 6.2rem;
     }
 
     .section-title {

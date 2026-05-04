@@ -10,7 +10,8 @@
       "Bash(mv icono-morado.png pix/icon-purple.png)",
       "Bash(mv diseño-hero.jpg pix/hero-design-reference.jpg)",
       "Bash(mv script.js js/main.js)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ],
     "deny": [],
     "ask": []

@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\ideas interactivas\\sitio-web\\logs\\.45660ab91821aacf4a82db5bca91cdb40517daf1-audit.json",
+    "files": [
+        {
+            "date": 1765424392320,
+            "name": "D:\\ideas interactivas\\sitio-web\\logs\\mcp-puppeteer-2025-12-11.log",
+            "hash": "d487a9614efa56f9bfa0fcde44d281a3bcfccc8fb368774fc4f3fa1b1b12c723"
+        }
+    ],
+    "hashType": "sha256"
+}

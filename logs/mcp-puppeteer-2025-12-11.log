@@ -1,0 +1,9 @@
+{"level":"info","message":"Starting MCP server","service":"mcp-puppeteer","timestamp":"2025-12-11 00:39:52.380"}
+{"level":"info","message":"MCP server started successfully","service":"mcp-puppeteer","timestamp":"2025-12-11 00:39:52.382"}
+{"arguments":{"url":"https://google.com"},"level":"debug","message":"Tool call received","service":"mcp-puppeteer","timestamp":"2025-12-11 00:40:20.969","tool":"puppeteer_navigate"}
+{"0":"n","1":"p","2":"x","level":"info","message":"Launching browser with config:","service":"mcp-puppeteer","timestamp":"2025-12-11 00:40:20.970"}
+{"level":"info","message":"Browser launched successfully","service":"mcp-puppeteer","timestamp":"2025-12-11 00:40:21.240"}
+{"level":"info","message":"Navigating to URL","service":"mcp-puppeteer","timestamp":"2025-12-11 00:40:21.241","url":"https://google.com"}
+{"level":"info","message":"Navigation successful","service":"mcp-puppeteer","status":200,"timestamp":"2025-12-11 00:40:23.476","url":"https://google.com"}
+{"arguments":{"height":1080,"name":"google-homepage","width":1920},"level":"debug","message":"Tool call received","service":"mcp-puppeteer","timestamp":"2025-12-11 00:40:30.052","tool":"puppeteer_screenshot"}
+{"level":"info","message":"Puppeteer MCP Server closing","service":"mcp-puppeteer","timestamp":"2025-12-11 00:47:46.589"}

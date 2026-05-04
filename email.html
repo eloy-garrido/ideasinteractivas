@@ -1,0 +1,109 @@
+<div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif; background-color: #ffffff; border: 1px solid #e9ecef;">
+    <!-- Header con Logo -->
+    <div style="padding: 25px; text-align: center; background: linear-gradient(135deg, #ffffff 0%, #f5f0fa 100%); border-bottom: 3px solid #69247C;">
+        <img src="https://ideasinteractivas.cl/nova/pluginfile.php/1/theme_mb2nl/logo/1764723375/logo1.png" alt="Academia Nova" style="max-width: 180px; height: auto;">
+    </div>
+
+    <!-- Contenido -->
+    <div style="padding: 25px 25px 30px 25px;">
+        <h2 style="color: #69247C; font-size: 28px; margin-bottom: 15px; text-align: center;">¡Bienvenido a la familia! 🎉</h2>
+
+        <p style="color: #333333; font-size: 18px; line-height: 1.6; margin: 30px 0 35px 0; text-align: center;">
+            Hola <strong style="color: #DA498D;">{$a->firstname}</strong>,
+        </p>
+
+        <div style="background: linear-gradient(135deg, #69247C 0%, #8B3FA0 100%); padding: 15px 20px 20px 20px; border-radius: 10px; margin: 35px 0; text-align: center;">
+            <p style="color: #ffffff; font-size: 16px; margin: 15px 0 0 0; font-weight: bold; line-height: 1.5;">
+                Bienvenido a nuestra plataforma, donde tú colocas las ideas y nosotros las hacemos interactivas. Nos complace que quieras empezar este viaje con nosotros. 🚀
+            </p>
+        </div>
+
+        <div style="background-color: #f8f9fa; padding: 25px; border-left: 4px solid #69247C; margin: 35px 0; border-radius: 8px;">
+            <p style="color: #333333; font-size: 15px; line-height: 1.6; margin: 0;">
+                Estamos emocionados de tenerte con nosotros. Hemos creado tu cuenta personal y aquí tienes todo lo que necesitas para comenzar tu aventura de aprendizaje:
+            </p>
+        </div>
+
+        <!-- Credenciales en diseño especial -->
+        <div style="background: linear-gradient(135deg, #ffffff 0%, #f9f7fc 100%); border: 2px solid #69247C; padding: 25px; border-radius: 10px; margin: 35px 0;">
+            <h3 style="color: #69247C; font-size: 18px; margin: 0 0 25px 0; text-align: center;">🔑 Tus Credenciales de Acceso</h3>
+
+            <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 15px 0;">
+                <p style="color: #333333; font-size: 14px; margin: 0 0 8px 0; font-weight: bold;">👤 Usuario:</p>
+                <p style="color: #69247C; font-size: 16px; margin: 0; font-family: monospace; background-color: #ffffff; padding: 10px; border-radius: 3px; border: 1px solid #e9ecef;">{$a->username}</p>
+            </div>
+
+            <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 15px 0;">
+                <p style="color: #333333; font-size: 14px; margin: 0 0 8px 0; font-weight: bold;">🔐 Contraseña temporal:</p>
+                <p style="color: #69247C; font-size: 16px; margin: 0; font-family: monospace; background-color: #ffffff; padding: 10px; border-radius: 3px; border: 1px solid #e9ecef;">{$a->newpassword}</p>
+            </div>
+        </div>
+
+        <!-- Información importante sobre primera sesión -->
+        <div style="background: linear-gradient(135deg, #69247C 0%, #8B3FA0 100%); padding: 10px 20px 20px 20px; border-radius: 8px; margin: 20px 0;">
+            <p style="color: #ffffff; font-size: 15px; margin: 15px 0 12px 0; font-weight: bold; line-height: 1.4;">
+                🚨 ¡Importante para tu primer inicio de sesión!
+            </p>
+            <p style="color: #ffffff; font-size: 14px; line-height: 1.5; margin: 0;">
+                Te pediremos que cambies tu contraseña cuando inicies sesión por primera vez. ¡Es por tu seguridad! 🛡️
+            </p>
+        </div>
+
+        <!-- Botón de Acción Principal -->
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="{$a->link}" style="background: linear-gradient(135deg, #69247C 0%, #8B3FA0 100%); color: #ffffff; padding: 18px 40px 18px 40px; text-decoration: none; border-radius: 10px; font-size: 18px; font-weight: bold; display: inline-block; box-shadow: 0 4px 15px rgba(105, 36, 124, 0.4); margin-top: 15px;">
+                🚀 ¡Comenzar mi Aventura de Aprendizaje!
+            </a>
+        </div>
+
+        <!-- Enlace alternativo -->
+        <div style="background-color: #ffffff; border: 2px dashed #69247C; padding: 20px; border-radius: 8px; margin: 35px 0;">
+            <p style="color: #69247C; font-size: 14px; line-height: 1.6; margin: 0 0 15px 0; font-weight: bold;">
+                🔗 Enlace directo a la plataforma:
+            </p>
+            <div style="background-color: #f8f9fa; padding: 12px; border-radius: 5px; margin: 15px 0 0 0;">
+                <p style="color: #69247C; font-size: 12px; word-break: break-all; margin: 0; font-family: monospace; background-color: #ffffff; padding: 10px; border: 1px solid #e9ecef; border-radius: 3px;">
+                    {$a->link}
+                </p>
+            </div>
+        </div>
+
+        <!-- Mensaje motivacional -->
+        <div style="background-color: #f8f9fa; padding: 0px 20px 20px 20px; border-radius: 10px; margin: 35px 0; text-align: center; border: 1px solid #e9ecef;">
+            <p style="color: #69247C; font-size: 16px; margin: 15px 0 12px 0; font-style: italic; font-weight: bold; line-height: 1.4;">
+                "El futuro pertenece a quienes aprenden más habilidades y las combinan de formas creativas" ✨
+            </p>
+            <p style="color: #333333; font-size: 14px; margin: 0; line-height: 1.4;">
+                ¡Y tú acabas de dar el primer paso hacia ese futuro increíble!
+            </p>
+        </div>
+
+        <!-- Información de ayuda -->
+        <div style="background: linear-gradient(135deg, #ffffff 0%, #fff9fc 100%); border: 2px solid #DA498D; padding: 0px 20px 20px 20px; border-radius: 8px; margin: 35px 0;">
+            <p style="color: #333333; font-size: 14px; line-height: 1.5; margin: 15px 0 12px 0;">
+                <strong>🤝 ¿Necesitas ayuda para empezar?</strong>
+            </p>
+            <p style="color: #333333; font-size: 14px; line-height: 1.5; margin: 0;">
+                ¡Estamos aquí para ti! No dudes en contactar a nuestro equipo de soporte: <strong style="color: #DA498D;">{$a->signoff}</strong>
+            </p>
+        </div>
+
+        <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 35px 0; text-align: center;">
+            ¡Estamos emocionados de acompañarte en esta increíble jornada de crecimiento y descubrimiento! 🌱
+        </p>
+
+        <p style="color: #69247C; font-size: 16px; margin: 35px 0; text-align: center; font-weight: bold;">
+            Con mucha alegría y expectativa,<br>
+            Todo el equipo de {$a->sitename} 💖
+        </p>
+
+        <div style="text-align: center; margin-top: 30px; border-top: 1px solid #e9ecef; padding-top: 20px;">
+            <p style="color: #333333; font-size: 13px; margin: 5px 0;">
+                © {$a->sitename} - Donde los sueños se convierten en conocimiento
+            </p>
+            <p style="color: #333333; font-size: 12px; margin: 0;">
+                Bienvenido a nuestra comunidad de aprendices extraordinarios 🌟
+            </p>
+        </div>
+    </div>
+</div>

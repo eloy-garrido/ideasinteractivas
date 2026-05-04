@@ -1,0 +1,51 @@
+<div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif; background-color: #ffffff; border: 1px solid #e9ecef;">
+    <div style="padding: 25px; text-align: center; background: linear-gradient(135deg, #ffffff 0%, #f5f0fa 100%); border-bottom: 3px solid #69247C;">
+        <img src="https://ideasinteractivas.cl/nova/pluginfile.php/1/theme_mb2nl/logo/1764723375/logo1.png" alt="Academia Nova" style="max-width: 180px; height: auto;">
+    </div>
+
+    <div style="padding: 25px 25px 30px 25px;">
+        <h2 style="color: #69247C; font-size: 28px; margin-bottom: 15px; text-align: center;">¡Matriculación Exitosa! 🎓</h2>
+
+        <p style="color: #333333; font-size: 18px; line-height: 1.6; margin: 30px 0 25px 0; text-align: center;">
+            Hola <strong style="color: #DA498D;">{$a->firstname}</strong>,
+        </p>
+
+        <div style="background: linear-gradient(135deg, #69247C 0%, #8B3FA0 100%); padding: 25px; border-radius: 10px; margin: 30px 0; text-align: center; box-shadow: 0 4px 15px rgba(105, 36, 124, 0.2);">
+            <p style="color: #f0f0f0; font-size: 16px; margin: 0 0 10px 0;">Ya eres parte oficial del curso:</p>
+            <h3 style="color: #ffffff; font-size: 24px; margin: 0; line-height: 1.3; text-transform: uppercase; letter-spacing: 0.5px;">
+                {$a->coursename}
+            </h3>
+        </div>
+
+        <div style="background-color: #f8f9fa; padding: 20px; border-left: 4px solid #DA498D; margin: 30px 0; border-radius: 8px;">
+            <p style="color: #333333; font-size: 15px; line-height: 1.6; margin: 0;">
+                Todo el contenido está listo para ti. Prepárate para descubrir nuevas habilidades, participar en actividades interactivas y conectar con el conocimiento.
+            </p>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="{$a->courselink}" style="background: linear-gradient(135deg, #69247C 0%, #8B3FA0 100%); color: #ffffff; padding: 18px 40px 18px 40px; text-decoration: none; border-radius: 10px; font-size: 18px; font-weight: bold; display: inline-block; box-shadow: 0 4px 15px rgba(105, 36, 124, 0.4); transition: all 0.3s ease;">
+                🚀 Ingresar al Aula Virtual
+            </a>
+        </div>
+
+        <div style="background-color: #ffffff; border: 2px dashed #69247C; padding: 20px; border-radius: 10px; margin: 35px 0; text-align: center;">
+            <p style="color: #69247C; font-size: 16px; margin: 5px 0; font-style: italic; font-weight: bold; line-height: 1.4;">
+                "El aprendizaje es un tesoro que seguirá a su dueño a todas partes." ✨
+            </p>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; border-top: 1px solid #e9ecef; padding-top: 25px;">
+            <p style="color: #666666; font-size: 14px; margin-bottom: 5px;">
+                ¿Dudas sobre el curso?
+            </p>
+            <p style="color: #333333; font-size: 14px; margin: 0;">
+                Tu equipo de soporte está aquí: <strong style="color: #DA498D;">{$a->signoff}</strong>
+            </p>
+            
+            <p style="color: #999999; font-size: 12px; margin-top: 20px;">
+                © {$a->sitename} - Tu plataforma de aprendizaje interactivo
+            </p>
+        </div>
+    </div>
+</div>

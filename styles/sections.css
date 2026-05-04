@@ -49,17 +49,41 @@
     padding: 25px;
     border-left: 4px solid #B8437A;
     text-align: left;
-    transition: all 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease, border-color 0.4s ease;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(184, 67, 122, 0.1);
+    position: relative;
+}
+
+.highlight-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(232, 244, 248, 0.5) 100%);
+    border-radius: 10px;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.highlight-box:hover::after {
+    opacity: 0;
+}
+
+.highlight-box i,
+.highlight-box h4,
+.highlight-box p {
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .highlight-box:hover {
     transform: translateX(8px) translateY(-4px);
     box-shadow: 0 12px 30px rgba(218, 73, 141, 0.25);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 244, 248, 0.7) 100%), url(../pix/fondo-hero.jpg);
-    background-size: cover;
-    background-position: center;
     border-left-color: #DA498D;
 }
 
@@ -106,17 +130,41 @@
     position: relative;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(105, 36, 124, 0.08);
-    transition: all 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
+.approach-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(232, 244, 248, 0.4) 100%);
+    border-radius: 12px;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.approach-card:hover::after {
+    opacity: 0;
+}
+
+.approach-card i,
+.approach-card h4,
+.approach-card p,
+.approach-card .approach-number {
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
 .approach-card:hover {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 244, 248, 0.6) 100%), url(../pix/fondo-hero.jpg);
-    background-size: cover;
-    background-position: center;
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(218, 73, 141, 0.2);
 }
@@ -198,6 +246,40 @@
     height: 100%;
 }
 
+.service-card::before {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -120px;
+    transform: rotate(-20deg);
+    width: 500px;
+    height: 500px;
+    background-image: url(../pix/hero-icon-white.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.15);
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 2;
+}
+
+.service-card:hover::after {
+    opacity: 1;
+}
+
 .service-card:nth-child(1) {
     background: linear-gradient(135deg, #69247C 0%, #DA498D 100%);
 }
@@ -225,6 +307,13 @@
 .service-card:hover {
     transform: translateY(-12px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 30px rgba(218, 73, 141, 0.4);
+}
+
+.service-card i,
+.service-card h3,
+.service-card p {
+    position: relative;
+    z-index: 3;
 }
 
 .service-card i {

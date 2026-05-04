@@ -8,6 +8,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     position: relative;
@@ -15,6 +16,12 @@
     padding: 0;
     padding-top: 70px;
     box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    #hero {
+        background-attachment: scroll;
+    }
 }
 
 #hero::before {
@@ -164,7 +171,7 @@
 
 .hero-subtitle {
     display: inline-block;
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 3px;
     color: var(--color-secondary);
@@ -173,11 +180,11 @@
 }
 
 .hero-title {
-    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
-    font-size: 5.5rem;
-    font-weight: 700;
-    line-height: 1.0;
-    letter-spacing: -0.03em;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
     margin-bottom: 28px;
     color: var(--color-primary);
     text-wrap: balance;
@@ -186,12 +193,13 @@
 }
 
 .hero-description {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.7;
     margin-bottom: 35px;
     color: var(--color-text);
     max-width: 100%;
-    font-weight: 500;
+    font-weight: 400;
     animation: fadeInDown 1s ease 0.4s;
     animation-fill-mode: both;
 }

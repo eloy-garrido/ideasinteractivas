@@ -4,7 +4,7 @@
 
 #hero {
     height: 100vh;
-    background-image: url(../pix/fondo-hero.jpg);
+    background-image: url(../pix/fondo-hero.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -190,6 +190,13 @@
     text-wrap: balance;
     animation: fadeInDown 1s ease 0.2s;
     animation-fill-mode: both;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #69247C 0%, #DA498D 50%, #FAC67A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .hero-description {
